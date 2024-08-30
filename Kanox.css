@@ -2009,7 +2009,7 @@ html {
     left: 4vw;
     font-size: 2.65rem;
     width: 50vw;
-    color: #162b45;
+    color: whitesmoke;
     font-weight: bolder;
     font-family: "Franklin Gothic medium", sans-serif;
   }
@@ -2028,9 +2028,10 @@ html {
     font-family: arial;
     font-size: 1.1rem;
     transform: scaleY(1.1);
-    margin-bottom: 0;
+    margin-bottom: 0vh;
     margin-top: 2vh;
     margin-left: 2vw;
+    line-height: 0.1;
   }
 
   .about_heading {
@@ -2039,8 +2040,9 @@ html {
     transform: scaleY(1.4);
     font-weight: 900;
     font-size: 2rem;
-    margin-top: 2vh;
+    margin-top: 0vh;
     margin-left: 2vw;
+    margin-bottom: 3vh;
     width: 90vw;
     line-height: 34px;
     margin-bottom: 0vh;
@@ -2223,6 +2225,7 @@ html {
     width: 95vw;
     margin: 0;
   }
+
   /* Team Section */
 
   .team {
@@ -2883,6 +2886,7 @@ html {
     height: 12vh;
     top: 55vh;
     border: 10px solid #ff007f;
+    display: none;
   }
 
   .experience_heading {
@@ -2922,7 +2926,7 @@ html {
     transform: scaleY(1.4);
     font-weight: 900;
     font-size: 1.2rem;
-    margin-top: 2vh;
+    margin-top: 0vh;
     margin-left: 2vw;
     width: 90vw;
     line-height: 24px;
@@ -3145,7 +3149,7 @@ html {
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.3);
     font-size: 1rem;
-    margin-left: 8vw;
+    margin-left: 10vw;
     position: relative;
     top: -3.2vh;
   }
@@ -3435,7 +3439,7 @@ html {
   .links-img {
     width: 3vw;
     height: 2vh;
-    padding-left: 1em;
+    padding-left: 0.5em;
   }
 
   .insta-heading {
