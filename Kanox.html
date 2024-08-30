@@ -433,15 +433,22 @@
             Stay updated with our latest trends Seed heaven so said <br />
             place winged over given forth fruit.
           </p>
-          <div class="form">
-            <div class="input">
-              <input type="text" placeholder="Enter email address" />
-              <div class="form-btn">
-                <button type="submit" form="newsletter">></button>
+          <form id="newsletter" onsubmit="storedata(event)">
+            <div class="form">
+              <div class="input">
+                <input
+                  type="text"
+                  id="email"
+                  required
+                  autocomplete="on"
+                  placeholder="Enter email address"
+                />
+                <div class="form-btn">
+                  <button type="submit">></button>
+                </div>
               </div>
             </div>
-          </div>
-          <br />
+          </form>
 
           <p>
             <a href="">
@@ -468,7 +475,7 @@
               />
             </a>
 
-            <a href="">
+            <a>
               <img
                 src="assets/footer/icon4.png"
                 alt="Skype"
@@ -510,5 +517,18 @@
         &hearts; by <span class="colorlib"> Colorlib </span>
       </p>
     </footer>
+
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript">
+      function storedata(event) {
+        event.preventDefault();
+        var email = document.getElementById("email").value;
+        localStorage.setItem("Is_email", email);
+      }
+    </script>
   </body>
 </html>

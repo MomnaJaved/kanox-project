@@ -223,6 +223,7 @@ html {
     box-shadow: 0 2px 2px 0 whitesmoke, 0 4px 4px 0 whitesmoke;
     cursor: pointer;
   }
+
   .block-heading {
     text-align: center;
     color: whitesmoke;
@@ -238,6 +239,10 @@ html {
     font-size: 1.2rem;
     line-height: 2.9vh;
     margin-top: 2.5vh;
+  }
+
+  .block-heading:hover {
+    color: #f7547f;
   }
 
   .column img {
@@ -470,6 +475,10 @@ html {
     font-size: 1.4rem;
   }
 
+  .text-column button:hover {
+    color: #f7547f;
+  }
+
   .image-column {
     padding-top: 4em;
     padding-right: 2.4em;
@@ -583,6 +592,9 @@ html {
     text-decoration: none;
   }
 
+  .profile_column a:hover {
+    color: #f7547f;
+  }
   .profile_column img {
     width: 26vw;
     height: 46vh;
@@ -641,7 +653,14 @@ html {
     background-color: white;
     border: 1px solid rgba(128, 128, 128, 0.593);
   }
+  .blog_column {
+    width: 100%;
+    transition: transform 0.6s ease;
+  }
 
+  .blog_column:hover {
+    transform: scale(1.1);
+  }
   .blog .blog_column-text {
     padding-left: 2em;
     padding-top: 1em;
@@ -682,6 +701,10 @@ html {
     font-size: 1.1rem;
     font-weight: 100;
     text-decoration: none;
+  }
+
+  .blog_column-text a:hover {
+    color: #f7547f;
   }
 
   .blog_column-images {
@@ -788,7 +811,8 @@ html {
     color: rgb(255, 255, 255);
     background-color: transparent;
     width: 25vw;
-    border: 0;
+    border: none;
+    outline: none;
   }
 
   footer button {
@@ -809,6 +833,16 @@ html {
   .links-img {
     width: 1vw;
     height: 2vh;
+    opacity: 0.6;
+  }
+  .links-img {
+    width: 100%;
+    transition: transform 0.4s ease;
+  }
+
+  .links-img:hover {
+    transform: scale(2);
+    opacity: 1;
   }
 
   .insta-heading {
@@ -835,6 +869,15 @@ html {
   .insta_col img {
     width: 6vw;
     height: 10vh;
+  }
+  .insta_col {
+    width: 100%;
+    transition: transform 0.4s ease;
+  }
+
+  .insta_col:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
   }
 
   footer hr {
