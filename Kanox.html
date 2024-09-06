@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="assets/header/logo-head - Copy.png"
-    />
-    <title>KANOX</title>
+    <link rel="icon" type="image/x-icon" href="assets/header/favicon.png" />
+    <title class="title">kanox</title>
     <link rel="stylesheet" href="Kanox.css" />
     <!-- META TAGS -->
 
@@ -21,49 +17,66 @@
     <!-- Author of KANOX -->
     <meta name="author" content="GigaLabs" />
 
-    <!-- Refresh document every 30 seconds -->
-    <!-- <meta http-equiv="refresh" content="30" /> -->
-
     <!-- Setting the viewport to make your website look good on all devices -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="logo">
-          <img src="assets/header/logo-head.png" />
+          <img src="assets/header/logo-head.png" alt="Logo" />
         </div>
 
-        <img src="assets/header/menubutton.png" class="menu-btn" />
-
-        <ul class="nav-links">
-          <li><a href="">HOME</a></li>
-          <li><a href="">ABOUT</a></li>
-          <li><a href="">SERVICES</a></li>
-          <li><a href="">PORTFOLIO</a></li>
-          <li><a href="">BLOG</a></li>
-          <li><a href="">PAGES</a></li>
-          <li><a href="">CONTACT</a></li>
-        </ul>
+        <img
+          src="assets/header/menubutton.png"
+          class="menu-btn"
+          alt="Menu Button"
+        />
+        <ul class="nav-links"></ul>
       </nav>
+
+      <script>
+        const navlinks = [
+          "HOME",
+          "ABOUT",
+          "SERVICES",
+          "PORTFOLIO",
+          "BLOG",
+          "PAGES",
+          "CONTACT",
+        ];
+
+        const ul = document.querySelector(".nav-links");
+
+        for (let i = 0; i < navlinks.length; i++) {
+          const li = document.createElement("li");
+          const anchor = document.createElement("a");
+
+          anchor.href = "#";
+          anchor.innerText = navlinks[i];
+
+          li.appendChild(anchor);
+          ul.appendChild(li);
+        }
+      </script>
+
       <!-- Hero Section -->
       <div class="hero">
-        <div class="hero-text">
-          <h1>THINK</h1>
-          <h2>CREATIVE TURN</h2>
-          <h3>IDEAS INTO LIFE</h3>
-          <button type="button">LEARN MORE ></button>
+        <div class="hero-text uppercase">
+          <h1>think</h1>
+          <h2>creative turn</h2>
+          <h3>ideas into life</h3>
+          <button type="button" class="uppercase">
+            learn more <img src="assets/header/arrow.png" alt="arrow" />
+          </button>
         </div>
         <div class="banner_img">
           <img src="assets/header/xbanner_img.png" class="banner" />
         </div>
       </div>
-      <img src="assets/header/overlay_1.png" class="overlay_1" />
+      <img src="assets/header/left_overlay.png" class="left_overlay" />
 
-      <img src="assets/header/overlay_2.png" class="overlay_2" />
+      <img src="assets/header/right_overlay.png" class="right_overlay" />
     </header>
     <!-- JavaScript for toggling the mobile menu -->
     <script>
@@ -77,47 +90,57 @@
     <!-- Main -->
     <main>
       <!-- Features Section -->
-
       <section class="features">
         <div class="features_heading">
-          <h1>OUR FEATURES</h1>
+          <h1 class="uppercase">our features</h1>
           <h2 class="heading2">Building brands with purpose</h2>
         </div>
-        <div class="features_row">
-          <div class="column">
-            <img src="assets/content/features/phone.png" />
-            <p class="block-heading">Responsive Design</p>
-            <p class="block-text">
-              Creeping for female light yea that lesser cand evening heaven
-              isn't bearing tree appear
-            </p>
-          </div>
-          <div class="column">
-            <img src="assets/content/features/screenshare.png" />
-            <p class="block-heading">Quality Matters</p>
-            <p class="block-text">
-              Creeping for female light yea that lesser cand evening heaven
-              isn't bearing tree appear
-            </p>
-          </div>
-          <div class="column">
-            <img src="assets/content/features/lock.png" />
-            <p class="block-heading">Better Security</p>
-            <p class="block-text">
-              Creeping for female light yea that lesser cand evening heaven
-              isn't bearing tree appear
-            </p>
-          </div>
-          <div class="column">
-            <img src="assets/content/features/headphones.png" />
-            <p class="block-heading">24/7 Service</p>
-            <p class="block-text">
-              Creeping for female light yea that lesser cand evening heaven
-              isn't bearing tree appear
-            </p>
-          </div>
-        </div>
+        <div class="features_row" id="features_row"></div>
+        >
       </section>
+
+      <script>
+        const headings = [
+          "Responsive Design",
+          "Quality Matters",
+          "Better Security",
+          "24/7 Service",
+        ];
+        const text =
+          "Creeping for female light yea that lesser cand evening heaven isn't bearing tree appear";
+        const images = [
+          "assets/content/features/phone.png",
+          "assets/content/features/screenshare.png",
+          "assets/content/features/lock.png",
+          "assets/content/features/headphones.png",
+        ];
+
+        const featuresRow = document.getElementById("features_row");
+        for (let i = 0; i < headings.length; i++) {
+          const column = document.createElement("div");
+          column.classList.add("column");
+
+          const img = document.createElement("img");
+          img.src = images[i];
+
+          const blockHeading = document.createElement("p");
+          blockHeading.classList.add("block-heading");
+          blockHeading.textContent = headings[i];
+
+          const blockText = document.createElement("p");
+          blockText.classList.add("block-text");
+          blockText.textContent = text;
+
+          // append child is a method to add a new element as the last child of a specific parent element.
+          column.appendChild(img);
+          column.appendChild(blockHeading);
+          column.appendChild(blockText);
+
+          // featuresRow is the parent element
+          featuresRow.appendChild(column);
+        }
+      </script>
+
       <!-- About Section -->
       <section class="About">
         <aside class="about_aside">
@@ -130,7 +153,7 @@
           </h2>
         </aside>
         <article class="about_article">
-          <h1>ABOUT OUR COMPANY</h1>
+          <h1 class="uppercase">about our company</h1>
           <h2 class="about_heading">
             Make the customer the hero of your <br />
             story
@@ -150,29 +173,38 @@
           <button type="button" class="learn_more-button">LEARN MORE ></button>
         </article>
       </section>
+
       <!-- Portfolio Section -->
       <section class="portfolio">
-        <h1 class="heading1">RECENT WORK</h1>
-        <h2>Creative work for client</h2>
+        <h1 class="heading1 uppercase">recent work</h1>
+        <h2 class="heading2">Creative work for client</h2>
+
         <article class="article_1">
           <div class="row">
             <div class="text-column">
-              <h1>MOCKUP DESIGN</h1>
-
-              <h2>
-                It under itself day whales waters our divide third <br />
-                brought
-              </h2>
-              <p>
-                Place isn't heaven firmament divided shall fruitful bring bring
-                may midst every a night dry herb. Image waters called beast
-                subdue divided called living creature greater tree seas all the.
-                Hath multiply female you're male likeness his made open beast
-                seas living moved, form. Void stars you our dominion
-              </p>
-              <button type="button">LEARN MORE →</button>
+              <div class="col">
+                <h1 class="uppercase">mockup design</h1>
+              </div>
+              <div class="col">
+                <h2>
+                  It under itself day whales waters our divide third <br />
+                  brought
+                </h2>
+              </div>
+              <div class="col">
+                <p>
+                  Place isn't heaven firmament divided shall fruitful bring
+                  bring may midst every a night dry herb. Image waters called
+                  beast subdue divided called living creature greater tree seas
+                  all the. Hath multiply female you're male likeness his made
+                  open beast seas living moved, form. Void stars you our
+                  dominion
+                </p>
+              </div>
+              <div class="col">
+                <button type="button">LEARN MORE →</button>
+              </div>
             </div>
-
             <div class="image-column">
               <aside class="aside_1">
                 <img
@@ -195,19 +227,26 @@
               </aside>
             </div>
             <div class="text-column">
-              <h1>MOCKUP DESIGN</h1>
-              <h2>
-                Saw i very dominion whose female was light <br />
-                divided multiply
-              </h2>
-              <p>
-                Place isn't heaven firmament divided shall fruitful bring bring
-                may midst every a night dry herb. Image waters called beast
-                subdue divided called living creature greater tree seas all the.
-                Hath multiply female you're male likeness his made open beast
-                seas living moved, form. Void stars you our dominion
-              </p>
-              <button type="button">LEARN MORE →</button>
+              <div class="col">
+                <h1 class="uppercase">mockup design</h1>
+              </div>
+              <div class="col">
+                <h2>
+                  Saw i very dominion whose female was light <br />
+                  divided multiply
+                </h2>
+              </div>
+              <div class="col">
+                <p>
+                  Place isn't heaven firmament divided shall fruitful bring
+                  bring may midst every a night dry herb. Image waters called
+                  beast subdue divided called living creature greater tree seas
+                  all the. Hath multiply female you're male likeness his made
+                  open beast seas living moved, form. Void stars you our
+                  dominion
+                </p>
+              </div>
+              <div class="col"><button type="button">LEARN MORE →</button></div>
             </div>
           </div>
         </article>
@@ -215,19 +254,28 @@
         <article class="article_3">
           <div class="row">
             <div class="text-column">
-              <h1>MOCKUP DESIGN</h1>
-              <h2>
-                It under itself day whales waters our divide third <br />
-                brought
-              </h2>
-              <p>
-                Place isn't heaven firmament divided shall fruitful bring bring
-                may midst every a night dry herb. Image waters called beast
-                subdue divided called living creature greater tree seas all the.
-                Hath multiply female you're male likeness his made open beast
-                seas living moved, form. Void stars you our dominion
-              </p>
-              <button type="button">LEARN MORE →</button>
+              <div class="col">
+                <h1 class="uppercase">mockup design</h1>
+              </div>
+              <div class="col">
+                <h2>
+                  It under itself day whales waters our divide third <br />
+                  brought
+                </h2>
+              </div>
+              <div class="col">
+                <p>
+                  Place isn't heaven firmament divided shall fruitful bring
+                  bring may midst every a night dry herb. Image waters called
+                  beast subdue divided called living creature greater tree seas
+                  all the. Hath multiply female you're male likeness his made
+                  open beast seas living moved, form. Void stars you our
+                  dominion
+                </p>
+              </div>
+              <div class="col">
+                <button type="button">LEARN MORE →</button>
+              </div>
             </div>
             <div class="image-column">
               <aside>
@@ -240,7 +288,6 @@
           </div>
         </article>
       </section>
-
       <!-- Team Section -->
       <section class="team">
         <header>
@@ -248,33 +295,33 @@
             <div class="team_column">
               <img src="assets/content/team/icon1.png" />
               <h1>85</h1>
-              <div class="hehe">
-                <div class="teamh2">
-                  SATISFIED<br />
-                  CLIENT
-                </div>
+
+              <div class="teamh2 uppercase">
+                satisfied<br />
+                client
               </div>
             </div>
+
             <div class="team_column">
               <img src="assets/content/team/icon2.png" />
               <h1>95</h1>
 
-              <div class="teamh2">
-                TOTAL<br />
-                PROJECT
+              <div class="teamh2 uppercase">
+                total<br />
+                project
               </div>
             </div>
             <div class="team_column">
               <img src="assets/content/team/icon3.png" />
               <h1>75</h1>
 
-              <div class="teamh2">WORK <br />COMPLETED</div>
+              <div class="teamh2 uppercase">work <br />completed</div>
             </div>
             <div class="team_column">
               <img src="assets/content/team/icon4.png" />
               <h1>95</h1>
 
-              <div class="teamh2">WORK <br />COMPLETED</div>
+              <div class="teamh2 uppercase">work <br />completed</div>
             </div>
           </div>
         </header>
@@ -322,95 +369,73 @@
 
       <!-- Blog Section -->
       <section class="blog">
-        <h1 class="blogh1">LATEST NEWS</h1>
+        <h1 class="blogh1 uppercase">latest news</h1>
         <br />
         <h2 class="blogh2">We Have True Story</h2>
-
-        <div class="blog_row">
-          <a href="">
-            <div class="blog_column">
-              <img
-                src="assets/content/blog/xblog_1.png"
-                class="blog_column-images"
-              />
-
-              <article class="blog_column-text">
-                <p>TECHNOLOGY <span> | </span> March 30,2019</p>
-                <h1>
-                  Seasons Form Upon Days May Wont <br />
-                  Bring Given Herb Sixth
-                </h1>
-
-                <p>
-                  <img
-                    src="assets/content/blog/icon1.png"
-                    class="comments-icon"
-                  />
-                  <a href> 4 Comments </a> &nbsp; &nbsp;
-                  <img
-                    src="assets/content/blog/icon2.png"
-                    class="comments-icon"
-                  />
-                  <a href> View </a>
-                </p>
-              </article>
-            </div>
-          </a>
-          <a href="">
-            <div class="blog_column">
-              <img
-                src="assets/content/blog/xblog_2.png"
-                class="blog_column-images"
-              />
-              <article class="blog_column-text">
-                <p>TECHNOLOGY <span> | </span> March 30,2019</p>
-                <h1>
-                  Very And Third Him Beginning <br />
-                  Signs Hath Subdue Make
-                </h1>
-                <p class="comments">
-                  <img
-                    src="assets/content/blog/icon1.png"
-                    class="comments-icon"
-                  />
-                  <a href> 4 Comments </a> &nbsp; &nbsp;
-                  <img
-                    src="assets/content/blog/icon2.png"
-                    class="comments-icon"
-                  />
-                  <a href> View </a>
-                </p>
-              </article>
-            </div>
-          </a>
-          <a href="">
-            <div class="blog_column">
-              <img
-                src="assets/content/blog/blog_3.png"
-                class="blog_column-images"
-              />
-              <article class="blog_column-text">
-                <p>TECHNOLOGY <span> | </span> March 30,2019</p>
-                <h1>
-                  Seasons Form Upon Days May Wont <br />Bring Given Herb Sixth
-                </h1>
-                <p class="comments">
-                  <img
-                    src="assets/content/blog/icon1.png"
-                    class="comments-icon"
-                  />
-                  <a href> 4 Comments </a> &nbsp; &nbsp;
-                  <img
-                    src="assets/content/blog/icon2.png"
-                    class="comments-icon"
-                  />
-                  <a href> View </a>
-                </p>
-              </article>
-            </div>
-          </a>
-        </div>
+        <div class="blog_row" id="blog_row"></div>
       </section>
+
+      <script>
+        const titles = [
+          "Seasons Form Upon Days May Wont Bring Given Herb Sixth",
+          "Very And Third Him Beginning Signs Hath Subdue Make",
+          "Seasons Form Upon Days May Wont Bring Given Herb Sixth",
+        ];
+
+        const blogImages = [
+          "assets/content/blog/xblog_1.png",
+          "assets/content/blog/xblog_2.png",
+          "assets/content/blog/blog_3.png",
+        ];
+
+        const blogtext = " technology | March 30,2019";
+
+        const blogColumn = document.createElement("div");
+
+        const blogRow = document.getElementById("blog_row");
+
+        for (let i = 0; i < titles.length; i++) {
+          const blogColumn = document.createElement("a");
+          blogColumn.href = "";
+          blogColumn.style = "text-decoration : none";
+
+          const blogColumnDiv = document.createElement("div");
+          blogColumnDiv.classList.add("blog_column");
+
+          const img = document.createElement("img");
+          img.src = blogImages[i];
+          img.classList.add("blog_column-images");
+
+          const article = document.createElement("article");
+          article.classList.add("blog_column-text");
+
+          const textParagraph = document.createElement("p");
+          textParagraph.classList.add("uppercase");
+          textParagraph.textContent = blogtext;
+
+          const titleHeading = document.createElement("h1");
+          titleHeading.textContent = titles[i];
+
+          const commentsParagraph = document.createElement("p");
+          commentsParagraph.classList.add("comments");
+          commentsParagraph.innerHTML = `
+                <img src="assets/content/blog/icon1.png" class="comments-icon" />
+                <a href> 4 Comments </a> &nbsp; &nbsp;
+                <img src="assets/content/blog/icon2.png" class="comments-icon" />
+                <a href> View </a>
+            `;
+
+          article.appendChild(textParagraph);
+          article.appendChild(titleHeading);
+          article.appendChild(commentsParagraph);
+
+          blogColumnDiv.appendChild(img);
+          blogColumnDiv.appendChild(article);
+
+          blogColumn.appendChild(blogColumnDiv);
+          blogRow.appendChild(blogColumn);
+        }
+      </script>
     </main>
     <!-- Footer -->
     <footer>

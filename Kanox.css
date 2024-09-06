@@ -49,7 +49,7 @@ html {
     text-decoration: none;
     color: rgba(44, 69, 86, 255);
     padding: 1em 1.5em;
-    font-size: 1vw;
+    font-size: 18px;
     z-index: 975;
   }
 
@@ -65,7 +65,9 @@ html {
     cursor: pointer;
     display: none;
   }
-
+  .uppercase {
+    text-transform: uppercase;
+  }
   /* HeroSection */
   .hero {
     display: flex;
@@ -99,15 +101,18 @@ html {
     align-self: center;
   }
   .hero h1 {
-    font-size: 7rem;
+    font-size: 106px;
     font-weight: 900;
     line-height: 1;
     color: rgba(17, 46, 65, 255);
     margin: 0;
   }
-
+  .hero-text button img {
+    width: 1vw;
+    height: 1vh;
+  }
   .hero h2 {
-    font-size: 5.6rem;
+    font-size: 90px;
     font-weight: 900;
     margin: 0;
     line-height: 1.2;
@@ -115,7 +120,7 @@ html {
   }
 
   .hero h3 {
-    font-size: 4.8rem;
+    font-size: 70px;
     letter-spacing: 4px;
     font-weight: 200;
     margin: 0;
@@ -130,7 +135,7 @@ html {
 
   /* Overlays */
 
-  .overlay_1 {
+  .left_overlay {
     position: absolute;
     z-index: 978;
     right: 79.8vw;
@@ -139,7 +144,7 @@ html {
     height: 70vh;
   }
 
-  .overlay_2 {
+  .right_overlay {
     position: absolute;
     z-index: 977;
     width: 20vw;
@@ -157,7 +162,7 @@ html {
     color: whitesmoke;
     border-style: none;
     font-family: monospace;
-    font-size: 1.2rem;
+    font-size: 20px;
     cursor: pointer;
     width: 11vw;
     height: 5vh;
@@ -182,7 +187,7 @@ html {
 
   .features_heading h1 {
     font-family: "Franklin Gothic Medium";
-    font-size: 1.6rem;
+    font-size: 26px;
     text-align: center;
     margin-top: 10vh;
     color: #f7547f;
@@ -190,7 +195,7 @@ html {
 
   .heading2 {
     font-family: "Franklin Gothic Medium";
-    font-size: 4rem;
+    font-size: 64px;
     text-align: center;
     color: rgba(17, 46, 65, 255);
     margin-top: 1.5vh;
@@ -227,16 +232,18 @@ html {
   .block-heading {
     text-align: center;
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 32px;
     font-family: impact;
     margin-top: 2.8vh;
+    line-height: 1;
+    margin-bottom: 0vh;
   }
 
   .block-text {
     color: #91959a;
     text-align: center;
     font-family: arial;
-    font-size: 1.2rem;
+    font-size: 18px;
     line-height: 2.9vh;
     margin-top: 2.5vh;
   }
@@ -302,7 +309,7 @@ html {
     position: absolute;
     top: 39vw;
     left: 26vw;
-    font-size: 3.75rem;
+    font-size: 60px;
     width: 30vw;
     color: #162b45;
     font-weight: bolder;
@@ -322,7 +329,7 @@ html {
   .about_article h1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1.6rem;
+    font-size: 26px;
     transform: scaleY(1.1);
     line-height: 18px;
     margin-bottom: 3vh;
@@ -334,7 +341,7 @@ html {
     transform: scaleY(1.4);
     line-height: 42px;
     font-weight: 900;
-    font-size: 2.6rem;
+    font-size: 42px;
   }
 
   .about_heading br {
@@ -349,15 +356,15 @@ html {
     font-family: "Franklin Gothic medium";
     transform: scaleY(1.1);
     line-height: 36px;
-    font-size: 2rem;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
+    font-size: 32px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 
   .about_article p {
     color: #595a5c;
     font-family: arial;
-    font-size: 1.8rem;
+    font-size: 20px;
     line-height: 40px;
   }
 
@@ -370,7 +377,7 @@ html {
     color: whitesmoke;
     border-style: none;
     font-family: monospace;
-    font-size: 1.8rem;
+    font-size: 28px;
     cursor: pointer;
     width: 15vw;
   }
@@ -382,47 +389,53 @@ html {
   .portfolio {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-rows: 8vw 20vw;
-    grid-gap: 20px;
     padding-bottom: 10vh;
   }
 
-  .portfolio h1 {
+  .portfolio .heading1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1.6rem;
+    font-size: 26px;
     text-align: center;
     transform: scaleY(1.2);
-    margin-top: 5vh;
-    margin-bottom: 0vh;
-    height: 3vh;
     font-weight: 800;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
-  .portfolio h2 {
+  .portfolio .heading2 {
     color: #162b45;
-    margin-top: -3vh;
-    margin-bottom: 1vh;
-    height: 6vh;
     text-align: center;
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);
     font-weight: 900;
-    font-size: 4rem;
-  }
-
-  .article_1 {
-    margin-top: -20vh;
+    font-size: 64px;
+    margin: 0;
+    padding-bottom: 1em;
   }
   .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  .article_1 .row {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+  }
+  .article_3 .row {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+  }
+  .article_2 .row {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+  }
+
   .article_2 .row .text-column {
     position: relative;
-    left: -10vw;
+    left: 10vw;
   }
   .portfolio .image-column {
     padding: 0;
@@ -435,32 +448,38 @@ html {
   .text-column {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: space-between;
+    justify-items: left;
     height: auto;
     width: 30vw;
     position: relative;
     left: 10vw;
   }
   .text-column h1 {
-    margin-top: -1vh;
+    margin-top: 2vh;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 20px;
+    color: #f7547f;
+    font-family: arial;
+    transform: scaleY(1.2);
+    font-weight: 800;
   }
 
   .text-column h2 {
-    font-size: 2.5rem;
-    margin-top: 1.5vw;
+    font-size: 40px;
     text-align: left;
-    line-height: 4vh;
+    color: #162b45;
+    font-family: "Franklin Gothic large", sans-serif;
+    transform: scaleY(1.3);
+    font-weight: 900;
   }
 
   .text-column p {
-    margin-top: 12vh;
+    margin-top: 0vh;
     text-align: left;
     color: #595a5c;
     font-family: arial;
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 24px;
   }
 
   .text-column button {
@@ -472,18 +491,16 @@ html {
     margin-left: -3px;
     color: #162b45;
     font-family: "Franklin Gothic medium", sans-serif;
-    font-size: 1.4rem;
+    font-size: 24px;
   }
-
+  .text-column button img {
+    width: 1vw;
+    height: 1vh;
+  }
   .text-column button:hover {
     color: #f7547f;
   }
 
-  .image-column {
-    padding-top: 4em;
-    padding-right: 2.4em;
-    padding-bottom: 5em;
-  }
   /* Team Section */
   .team {
     width: 100%;
@@ -517,17 +534,17 @@ html {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 4rem;
+    font-size: 84px;
     margin-top: 2vh;
-    margin-bottom: -3.2vw;
-    margin-left: -5vw;
+    margin-bottom: -4.2vw;
+    margin-left: -6vw;
   }
 
   .teamh2 {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.3);
-    font-size: 2rem;
+    font-size: 32px;
   }
 
   .team_column img {
@@ -572,13 +589,13 @@ html {
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
     margin-top: 2.5vw;
-    font-size: 1.5rem;
+    font-size: 30px;
   }
 
   .profileh2 {
     color: #999ca0;
     font-family: arial;
-    font-size: 1.1rem;
+    font-size: 20px;
     font-weight: 100;
     margin-bottom: 0.6vw;
     margin-top: 0.1vw;
@@ -587,7 +604,7 @@ html {
   .profile_column a {
     color: #999ca0;
     font-family: arial;
-    font-size: 1.1rem;
+    font-size: 20px;
     font-weight: 100;
     text-decoration: none;
   }
@@ -602,7 +619,7 @@ html {
 
   .bullet {
     color: #999ca0c1;
-    font-size: 3rem;
+    font-size: 48px;
     position: relative;
     top: 1vh;
     margin-right: 0.7vw;
@@ -622,7 +639,7 @@ html {
   .blogh1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1.6rem;
+    font-size: 24px;
     transform: scaleY(1.2);
     font-weight: 800;
     text-align: center;
@@ -634,7 +651,7 @@ html {
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 64px;
     text-align: center;
   }
 
@@ -673,14 +690,14 @@ html {
     color: #162b45;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 1.6rem;
+    font-size: 24px;
   }
 
   .blog .blog_column-text p {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: 100;
     text-decoration: none;
     line-height: 1;
@@ -698,7 +715,7 @@ html {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 100;
     text-decoration: none;
   }
@@ -708,7 +725,7 @@ html {
   }
 
   .blog_column-images {
-    width: 25vw;
+    width: 28vw;
     height: auto;
   }
 
@@ -739,7 +756,7 @@ html {
   }
 
   .logo-text-p {
-    font-size: 1.2rem;
+    font-size: 18px;
     text-align: left;
     color: #999ca0;
     font-family: arial;
@@ -763,7 +780,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 2rem;
+    font-size: 32px;
 
     width: 30vw;
   }
@@ -774,7 +791,7 @@ html {
     color: #999ca0;
     text-align: left;
     font-family: arial;
-    font-size: 1.2rem;
+    font-size: 18px;
     margin: 0;
     margin-bottom: 20px;
     width: 30vw;
@@ -807,7 +824,7 @@ html {
   }
 
   footer input[type="text"] {
-    font-size: 1rem;
+    font-size: 16px;
     color: rgb(255, 255, 255);
     background-color: transparent;
     width: 25vw;
@@ -818,7 +835,7 @@ html {
   footer button {
     background-color: #f7547f;
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 16px;
     font-family: "Courier New", Courier, monospace;
     border: none;
     cursor: pointer;
@@ -834,9 +851,6 @@ html {
     width: 1vw;
     height: 2vh;
     opacity: 0.6;
-  }
-  .links-img {
-    width: 100%;
     transition: transform 0.4s ease;
   }
 
@@ -849,7 +863,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 2rem;
+    font-size: 32px;
     padding-left: 0.7em;
     width: 30vw;
   }
@@ -896,7 +910,7 @@ html {
   }
 
   .footer-p {
-    font-size: 1.2rem;
+    font-size: 18px;
     text-align: center;
     padding-bottom: 1em;
     width: 100%;
@@ -952,7 +966,7 @@ html {
     text-decoration: none;
     color: rgba(44, 69, 86, 255);
     padding: 1em 1.5em;
-    font-size: 1vw;
+    font-size: 16px;
     z-index: 975;
   }
 
@@ -1002,7 +1016,7 @@ html {
     align-self: center;
   }
   .hero h1 {
-    font-size: 5rem;
+    font-size: 80px;
     font-weight: 900;
     line-height: 1;
     color: rgba(17, 46, 65, 255);
@@ -1010,7 +1024,7 @@ html {
   }
 
   .hero h2 {
-    font-size: 3.6rem;
+    font-size: 58px;
     font-weight: 900;
     margin: 0;
     line-height: 1.2;
@@ -1018,7 +1032,7 @@ html {
   }
 
   .hero h3 {
-    font-size: 2.8rem;
+    font-size: 44px;
     letter-spacing: 4px;
     font-weight: 200;
     margin: 0;
@@ -1033,7 +1047,7 @@ html {
 
   /* Overlays */
 
-  .overlay_1 {
+  .left_overlay {
     position: absolute;
     z-index: 978;
     right: 79.8vw;
@@ -1042,7 +1056,7 @@ html {
     height: 70vh;
   }
 
-  .overlay_2 {
+  .right_overlay {
     position: absolute;
     z-index: 977;
     width: 20vw;
@@ -1053,18 +1067,18 @@ html {
   /* Learn More Button */
 
   .hero button {
-    padding: 1rem 2rem;
     background: #f7547f;
     box-shadow: 0 1px 8px 0 #f7547f, 0 1px 1px 0 #f7547f;
     border-radius: 0.5px;
     color: whitesmoke;
     border-style: none;
     font-family: monospace;
-    font-size: 0.8rem;
+    font-size: 14px;
     cursor: pointer;
     width: 11vw;
     height: 5vh;
     margin-top: 8vh;
+    padding: 0;
   }
   .hero button:hover {
     box-shadow: 0 4px 8px 0 #e0a5b4, 0 8px 8px 0 #e0a5b4;
@@ -1085,7 +1099,7 @@ html {
 
   .features_heading h1 {
     font-family: "Franklin Gothic Medium";
-    font-size: 1rem;
+    font-size: 16px;
     text-align: center;
     margin-top: 10vh;
     color: #f7547f;
@@ -1093,7 +1107,7 @@ html {
 
   .heading2 {
     font-family: "Franklin Gothic Medium";
-    font-size: 3rem;
+    font-size: 48px;
     text-align: center;
     color: rgba(17, 46, 65, 255);
     margin-top: 1.5vh;
@@ -1129,7 +1143,7 @@ html {
   .block-heading {
     text-align: center;
     color: whitesmoke;
-    font-size: 1.4rem;
+    font-size: 20px;
     font-family: impact;
     margin-top: 2.8vh;
   }
@@ -1138,7 +1152,7 @@ html {
     color: #91959a;
     text-align: center;
     font-family: arial;
-    font-size: 0.8rem;
+    font-size: 12.6px;
     line-height: 2.9vh;
     margin-top: 2.5vh;
   }
@@ -1200,7 +1214,7 @@ html {
     position: absolute;
     top: 39vw;
     left: 26vw;
-    font-size: 2.75rem;
+    font-size: 24px;
     width: 40vw;
     color: #162b45;
     font-weight: bolder;
@@ -1220,19 +1234,19 @@ html {
   .about_article h1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     transform: scaleY(1.1);
-    line-height: 18px;
-    margin-bottom: 3vh;
+    line-height: 14px;
+    margin-bottom: 2vh;
   }
 
   .about_heading {
     color: #162b45;
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.4);
-    line-height: 32px;
+    line-height: 22px;
     font-weight: 900;
-    font-size: 1.6rem;
+    font-size: 26px;
   }
 
   .about_heading br {
@@ -1247,33 +1261,34 @@ html {
     font-family: "Franklin Gothic medium";
     transform: scaleY(1.1);
     line-height: 26px;
-    font-size: 1.6rem;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
+    font-size: 26px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 
   .about_article p {
     color: #595a5c;
     font-family: arial;
-    font-size: 1.4rem;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .about_article p br {
     display: none;
   }
   .about_article button {
-    margin-top: 1vw;
-    padding: 1vw 2vw;
     background: #f7547f;
     box-shadow: 0 1px 8px 0 #f7547f, 0 1px 1px 0 #f7547f;
     border-radius: 0.5px;
     color: whitesmoke;
     border-style: none;
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 14px;
     cursor: pointer;
-    width: 15vw;
+    width: 11vw;
+    height: 5vh;
+    margin-top: 8vh;
+    padding: 0%;
   }
   .about_article button:hover {
     box-shadow: 0 4px 8px 0 #e0a5b4, 0 8px 8px 0 #e0a5b4;
@@ -1284,82 +1299,96 @@ html {
   .portfolio {
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-rows: 8vw 20vw;
-    grid-gap: 20px;
     padding-bottom: 10vh;
   }
 
   .portfolio .heading1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     text-align: center;
     transform: scaleY(1.2);
-    height: 2vh;
-    margin-top: 10vh;
     font-weight: 800;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
-  .portfolio h2 {
+  .portfolio .heading2 {
     color: #162b45;
-    margin: 0;
     text-align: center;
     font-family: "Franklin Gothic large", sans-serif;
-    transform: scaleY(1.3);
+    transform: scaleY(1.2);
     font-weight: 900;
-    font-size: 2.6rem;
+    font-size: 48px;
+    margin: 0;
+    padding-bottom: 1em;
   }
-
   .row {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
-  }
-  .image-column .right_img {
-    width: 45vw;
-    height: auto;
   }
 
-  .image-column .left_img {
-    width: 45vw;
-    height: auto;
+  .article_1 .row {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+  }
+  .article_3 .row {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+  }
+  .article_2 .row {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+  }
+
+  .article_2 .row .text-column {
+    position: relative;
+    left: 10vw;
+  }
+  .portfolio .image-column {
+    padding: 0;
   }
   .image-column img {
-    width: 62vw;
-    height: auto;
+    width: 50vw;
+    height: 50vh;
   }
 
   .text-column {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: space-between;
+    justify-items: left;
     height: auto;
     width: 30vw;
-    position: relative;
-    left: 10vw;
-    top: 0vw;
   }
   .text-column h1 {
+    margin-top: 2vh;
     text-align: left;
-    font-size: 1rem;
+    font-size: 16px;
+    color: #f7547f;
+    font-family: arial;
+    transform: scaleY(1.2);
+    font-weight: 800;
   }
 
   .text-column h2 {
-    font-size: 1.5rem;
-    margin-top: 2vh;
+    font-size: 24px;
     text-align: left;
-    line-height: 1;
+
+    color: #162b45;
+    font-family: "Franklin Gothic large", sans-serif;
+    transform: scaleY(1.3);
+    font-weight: 900;
   }
 
   .text-column p {
+    margin-top: 0vh;
     text-align: left;
     color: #595a5c;
     font-family: arial;
-    font-size: 1.15rem;
-    margin-top: 6vh;
-    margin-bottom: 1vh;
+    font-size: 18px;
   }
 
   .text-column button {
@@ -1371,12 +1400,14 @@ html {
     margin-left: -3px;
     color: #162b45;
     font-family: "Franklin Gothic medium", sans-serif;
-    font-size: 1rem;
+    font-size: 16px;
   }
-
-  .image-column {
-    padding-top: 2em;
-    padding-bottom: 2em;
+  .text-column button img {
+    width: 1vw;
+    height: 1vh;
+  }
+  .text-column button:hover {
+    color: #f7547f;
   }
 
   /* Team Section */
@@ -1412,7 +1443,7 @@ html {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 3.6rem;
+    font-size: 58px;
     margin-top: 2vh;
     margin-bottom: -3.6vw;
     margin-left: -5vw;
@@ -1422,7 +1453,7 @@ html {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.3);
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 
   .team_column img {
@@ -1447,9 +1478,9 @@ html {
     display: flex;
     column-gap: 3vw;
     width: 60vw;
-    height: 70vh;
+    height: auto;
     position: relative;
-    right: 16.7vw;
+    right: 12.8vw;
   }
 
   .profile_column {
@@ -1459,7 +1490,7 @@ html {
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(128, 128, 128, 0.593);
-    padding: 2vw 2vw;
+    padding: 0.1em 1em;
   }
 
   .profile_column h1 {
@@ -1467,13 +1498,13 @@ html {
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
     margin-top: 2.5vw;
-    font-size: 1.5rem;
+    font-size: 20px;
   }
 
   .profileh2 {
     color: #999ca0;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 100;
     margin-bottom: 0.6vw;
     margin-top: 0.1vw;
@@ -1482,7 +1513,7 @@ html {
   .profile_column a {
     color: #999ca0;
     font-family: arial;
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: 100;
     text-decoration: none;
   }
@@ -1495,7 +1526,7 @@ html {
 
   .bullet {
     color: #999ca0c1;
-    font-size: 3rem;
+    font-size: 48px;
     position: relative;
     top: 1vh;
     margin-right: 0.7vw;
@@ -1516,7 +1547,7 @@ html {
   .blogh1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     transform: scaleY(1.2);
     font-weight: 800;
     text-align: center;
@@ -1528,7 +1559,7 @@ html {
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 48px;
     text-align: center;
   }
 
@@ -1560,14 +1591,14 @@ html {
     color: #162b45;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 1.2rem;
+    font-size: 18px;
   }
 
   .blog .blog_column-text p {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 100;
     text-decoration: none;
     line-height: 1;
@@ -1585,13 +1616,13 @@ html {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: 100;
     text-decoration: none;
   }
 
   .blog_column-images {
-    width: 25vw;
+    width: 26vw;
     height: auto;
   }
 
@@ -1622,7 +1653,7 @@ html {
   }
 
   .logo-text-p {
-    font-size: 0.9rem;
+    font-size: 16px;
     text-align: left;
     color: #999ca0;
     font-family: arial;
@@ -1646,7 +1677,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 1.5rem;
+    font-size: 20px;
 
     width: 30vw;
   }
@@ -1657,7 +1688,7 @@ html {
     color: #999ca0;
     text-align: left;
     font-family: arial;
-    font-size: 0.9rem;
+    font-size: 16px;
     margin: 0;
     margin-bottom: 20px;
     width: 30vw;
@@ -1691,7 +1722,7 @@ html {
   }
 
   footer input[type="text"] {
-    font-size: 1rem;
+    font-size: 16px;
     color: rgb(255, 255, 255);
     background-color: transparent;
     width: 25vw;
@@ -1701,7 +1732,7 @@ html {
   footer button {
     background-color: #f7547f;
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 16px;
     font-family: "Courier New", Courier, monospace;
     border: none;
     cursor: pointer;
@@ -1722,7 +1753,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 1.5rem;
+    font-size: 20px;
     padding-left: 0.7em;
     width: 28vw;
   }
@@ -1760,16 +1791,14 @@ html {
   }
 
   .footer-p {
-    font-size: 1.2rem;
+    font-size: 18px;
     text-align: center;
     padding-bottom: 1em;
     width: 100%;
   }
 }
-
-/* Tablet Screens */
-
-@media screen and (max-device-width: 768px) and (max-device-height: 1024px) {
+/* Ipad pro */
+@media screen and (max-device-width: 1024px) and (max-device-height: 1366px) {
   /* Hero Section */
   body {
     margin: 0;
@@ -1783,11 +1812,11 @@ html {
     background-color: #f0eed4;
   }
 
-  .overlay_2 {
+  .right_overlay {
     display: none;
   }
 
-  .overlay_1 {
+  .left_overlay {
     display: none;
   }
 
@@ -1821,7 +1850,7 @@ html {
   .nav-links li {
     list-style: none;
     margin: 15px 0;
-    font-size: 1rem;
+    font-size: 16px;
     text-align: center;
     justify-content: center;
     margin-left: -15vw;
@@ -1831,7 +1860,7 @@ html {
     display: flex;
   }
   .navbar a {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 100;
     line-height: 2;
     text-decoration: none;
@@ -1858,6 +1887,7 @@ html {
   .hero-text {
     width: 100%;
     height: auto;
+    margin-top: 2em;
   }
   .banner_img {
     justify-content: center;
@@ -1870,19 +1900,17 @@ html {
   h2,
   h3,
   button {
-    position: relative;
-    top: 4vh;
     font-family: "Franklin Gothic Larges", Arial;
   }
 
   .hero h1 {
-    font-size: 4rem;
+    font-size: 72px;
     transform: scaleY(1.1);
     transform: scaleX(0.9);
     font-weight: 900;
   }
   .hero h2 {
-    font-size: 2.6rem;
+    font-size: 54px;
     transform: scaleY(1.1);
     transform: scaleX(0.9);
     font-weight: 900;
@@ -1890,7 +1918,7 @@ html {
   }
 
   .hero h3 {
-    font-size: 2rem;
+    font-size: 42px;
     transform: scaleX(1);
     font-weight: 500;
   }
@@ -1898,7 +1926,7 @@ html {
   .hero button {
     width: 28vw;
     height: 4vh;
-    font-size: 1rem;
+    font-size: 24px;
     padding: 1vw 2vw;
     background: #f7547f;
     box-shadow: 0 1px 8px 0 #f7547f, 0 1px 1px 0 #f7547f;
@@ -1939,14 +1967,877 @@ html {
   }
   .features_heading h1 {
     font-family: "Franklin Gothic Medium";
-    font-size: 1.1rem;
+    font-size: 24px;
     text-align: center;
     color: #f7547f;
     margin-bottom: 2vh;
   }
 
   .heading2 {
-    font-size: 2rem;
+    font-size: 42px;
+    text-align: center;
+    color: rgba(17, 46, 65, 255);
+    margin-bottom: 6vh;
+    font-family: "Franklin Gothic Medium";
+  }
+
+  .features_row {
+    flex-direction: column;
+    height: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    align-items: center;
+    background-color: #162b45;
+  }
+  .column img {
+    width: 10vw;
+    height: auto;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 2em;
+    line-height: 2vw;
+    background: #2e4158;
+    transition: 0.3s;
+    align-content: center;
+    margin-bottom: 2vh;
+    width: 85vw;
+  }
+
+  .column:hover {
+    box-shadow: 0 2px 2px 0 whitesmoke, 0 4px 4px 0 whitesmoke;
+    cursor: pointer;
+  }
+  .block-heading {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 42px;
+    font-family: impact;
+    margin-top: 3vh;
+  }
+
+  .block-text {
+    color: #91959a;
+    text-align: center;
+    font-family: arial;
+    font-size: 24px;
+    line-height: 1.7;
+    margin-top: 2vh;
+  }
+
+  .column img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 2.5vh;
+  }
+
+  /* About Section */
+
+  .About {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+  }
+
+  .About aside {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .about_aside .img_1 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .about_aside .img_2 {
+    display: none;
+  }
+
+  .experience_container {
+    position: absolute;
+    display: inline-block;
+    left: 1vw;
+    width: 16vw;
+    height: 12vh;
+    border: 10px solid #ff007f;
+  }
+
+  .experience_heading {
+    text-align: left;
+    position: absolute;
+    top: 99.2vw;
+    left: 4vw;
+    font-size: 42px;
+    width: 50vw;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-family: "Franklin Gothic medium", sans-serif;
+  }
+
+  .about_article {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+  }
+
+  .about_article h1 {
+    color: #f7547f;
+    font-family: arial;
+    font-size: 24px;
+    transform: scaleY(1.1);
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    line-height: 0.1;
+  }
+
+  .about_heading {
+    color: #162b45;
+    font-family: "Franklin Gothic large", sans-serif;
+    transform: scaleY(1.4);
+    font-weight: 900;
+    font-size: 42px;
+    margin-top: 0vh;
+    margin-left: 2vw;
+    width: 90vw;
+    line-height: 1.1em;
+    margin-bottom: 2vh;
+  }
+
+  .about_heading br {
+    display: none;
+  }
+
+  .about_article h3 br {
+    display: none;
+  }
+  .about_article h3 {
+    color: #1c3758;
+    font-family: "Franklin Gothic medium";
+    transform: scaleY(1.1);
+    margin-top: 0.1vh;
+    margin-bottom: 1vh;
+    font-size: 36px;
+    width: 90vw;
+    margin-left: 2vw;
+    line-height: 34px;
+    line-height: 1.2em;
+  }
+
+  .about_article p {
+    color: #595a5c;
+    font-family: arial;
+    font-size: 26px;
+    line-height: 24px;
+    margin-top: 1vh;
+    width: 90vw;
+    margin-left: 2vw;
+    line-height: 1.2em;
+  }
+
+  .about_article p br {
+    display: none;
+  }
+
+  .about_article button {
+    margin-top: 0.4vw;
+    padding: 1vw 2vw;
+    background: #f7547f;
+    box-shadow: 0 1px 8px 0 #f7547f, 0 1px 1px 0 #f7547f;
+    border-radius: 0.5px;
+    color: whitesmoke;
+    border-style: none;
+    font-family: monospace;
+    font-size: 24px;
+    cursor: pointer;
+    width: 25vw;
+    height: 5vh;
+    margin-left: 2vw;
+    position: relative;
+    top: 0;
+  }
+  .about_article button:hover {
+    box-shadow: 0 4px 8px 0 #e0a5b4, 0 8px 8px 0 #e0a5b4;
+  }
+  /* Portfolio Section */
+  .portfolio {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+  }
+  .portfolio .heading1 {
+    font-size: 24px;
+    text-align: center;
+    color: #f7547f;
+    font-weight: 800;
+    transform: scaleY(1.2);
+    font-family: arial;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .portfolio .heading2 {
+    font-size: 42px;
+    color: #162b45;
+    font-family: "Franklin Gothic large", sans-serif;
+    transform: scaleY(1.3);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .portfolio .row {
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .article_1 .article_2 .article_3 {
+    width: 100%;
+  }
+
+  .text-column br {
+    display: none;
+  }
+  .text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95vw;
+    padding-top: 2em;
+    height: auto;
+    padding-bottom: 2em;
+    position: relative;
+    left: 0vw;
+    right: 0vw;
+    align-items: flex-start;
+  }
+  .article_2 .row .text-column {
+    position: relative;
+    left: 0vw;
+    right: 0vw;
+  }
+  .text-column h1 {
+    font-size: 22px;
+    line-height: 1em;
+  }
+  .text-column h2 {
+    font-size: 32px;
+    line-height: 1em;
+  }
+
+  .text-column p {
+    font-size: 24px;
+    padding-right: 2em;
+  }
+
+  .text-column button {
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: #162b45;
+    font-family: "Franklin Gothic medium", sans-serif;
+  }
+
+  .image-column {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1vh;
+  }
+
+  .image-column img {
+    height: auto;
+    width: 95vw;
+    margin: 0;
+  }
+
+  /* Team Section */
+
+  .team {
+    width: 100%;
+  }
+
+  .team header {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #162b45;
+    padding-top: 5vh;
+  }
+
+  .team_row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .team .team_column {
+    flex-direction: column;
+    padding-top: 2em;
+    padding-left: 4em;
+    padding-right: 2em;
+  }
+
+  .team_column h1 {
+    color: whitesmoke;
+    font-family: "Franklin Gothic medium", sans-serif;
+    transform: scaleY(1.2);
+    font-size: 84px;
+    margin-left: 0vw;
+  }
+
+  .teamh2 {
+    color: whitesmoke;
+    font-family: "Franklin Gothic medium", sans-serif;
+    transform: scaleY(1.3);
+    font-size: 34px;
+    margin-left: 12vw;
+    position: relative;
+    top: -2.8vh;
+  }
+
+  .team_column img {
+    width: 10vw;
+    margin-left: 0vw;
+  }
+
+  .profile_container {
+    width: 100%;
+    height: auto;
+    background-color: #162b45;
+    margin-top: -1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding-top: 16vh;
+    padding-bottom: 20vh;
+  }
+  .profile_row {
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 2em;
+  }
+
+  .profile_column {
+    align-items: center;
+    width: 85vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(128, 128, 128, 0.593);
+    padding: 2vw 2vw;
+  }
+
+  .profile_column h1 {
+    color: whitesmoke;
+    font-family: "Franklin Gothic medium", sans-serif;
+    transform: scaleY(1.2);
+    margin-top: 2.5vw;
+    font-size: 52px;
+  }
+
+  .profileh2 {
+    color: #999ca0;
+    font-family: arial;
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 0.6vw;
+    margin-top: 0.1vw;
+  }
+
+  .profile_column a {
+    color: #999ca0;
+    font-family: arial;
+    font-size: 22px;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  .profile_column img {
+    width: 80vw;
+    height: auto;
+    padding-top: 2vh;
+  }
+
+  .bullet {
+    color: #999ca0c1;
+    font-size: 48px;
+    position: relative;
+    top: 1vh;
+    margin-right: 0.7vw;
+    margin-left: 2vw;
+  }
+  /* Blog Section */
+  .blog {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .blogh1 {
+    color: #f7547f;
+    font-family: arial;
+    font-size: 24px;
+    transform: scaleY(1.2);
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .blogh2 {
+    color: #162b45;
+    font-family: "Franklin Gothic large", sans-serif;
+    transform: scaleY(1.3);
+    font-weight: 900;
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .blog_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blog .blog_row {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 4em;
+  }
+  .blog_column {
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    background-color: white;
+    width: 87vw;
+    margin-bottom: 3vh;
+    border: 1px solid rgba(128, 128, 128, 0.593);
+  }
+  .blog_column .blog_column-images {
+    width: 87vw;
+    height: auto;
+  }
+
+  .blog_column .blog_column-text h1 {
+    text-align: left;
+    margin-top: 2vh;
+    color: #162b45;
+    font-family: "Franklin Gothic medium", sans-serif;
+    transform: scaleY(1.2);
+    font-size: 43px;
+  }
+
+  .blog_column-text h1 br {
+    display: none;
+  }
+
+  .blog .blog_column-text {
+    padding: 2em;
+  }
+
+  .blog .blog_column-text p {
+    text-align: left;
+    color: #999ca0;
+    font-family: arial;
+    font-size: 24px;
+    font-weight: 100;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .blog_column-text a {
+    text-align: left;
+    color: #999ca0;
+    font-family: arial;
+    font-size: 22px;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  .comments-icon {
+    width: 4vw;
+    height: 3vh;
+    margin-bottom: -0.8vh;
+  }
+
+  /* Footer Section */
+  footer {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #162b45;
+  }
+
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+  }
+
+  .logo-text-img {
+    width: 25vw;
+    height: 7vh;
+    padding-left: 1em;
+    padding-top: 1em;
+  }
+
+  .logo-text-p {
+    font-size: 24px;
+    text-align: left;
+    color: #999ca0;
+    font-family: arial;
+    padding-left: 1em;
+    width: 90vw;
+  }
+
+  .logo-text-p br {
+    display: none;
+  }
+
+  .logo-text-p .break {
+    display: block;
+  }
+
+  .logo-text-p .break1 {
+    display: block;
+  }
+
+  .form-heading {
+    color: whitesmoke;
+    text-align: left;
+    font-family: "Franklin Gothic larges", "Arial Narrow";
+    font-size: 42px;
+    padding-left: 0.6em;
+  }
+
+  .form-p {
+    color: #999ca0;
+    text-align: left;
+    font-family: arial;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 1em;
+    width: 90vw;
+  }
+
+  .form-p br {
+    display: none;
+  }
+  footer .form {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: auto;
+    padding-left: 1em;
+  }
+
+  footer .input {
+    display: flex;
+    height: auto;
+    border: 1px solid rgba(128, 128, 128, 0.473);
+    width: 90vw;
+    height: 4vh;
+    padding-left: 1em;
+    padding-right: 0.4em;
+    padding-top: 0.4em;
+    padding-bottom: 0.8em;
+  }
+
+  footer .form-btn {
+    width: 5.5vw;
+  }
+
+  footer input[type="text"] {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    width: 82vw;
+    border: 0;
+  }
+
+  footer button {
+    background-color: #f7547f;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    cursor: pointer;
+    width: 5.5vw;
+    height: 4.6vh;
+    position: relative;
+    top: 0;
+  }
+
+  footer button:hover {
+    background-color: #e0a5b4;
+  }
+
+  .links-img {
+    width: 3vw;
+    height: 2vh;
+    padding-left: 1em;
+    position: relative;
+    top: 1vh;
+  }
+
+  .insta-heading {
+    color: whitesmoke;
+    text-align: left;
+    font-family: "Franklin Gothic larges", "Arial Narrow";
+    font-size: 42px;
+    padding-left: 0.7em;
+  }
+
+  .insta_row {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    padding-left: 1em;
+  }
+
+  .insta_row {
+    margin-left: 10px;
+  }
+
+  .insta_col img {
+    width: 13vw;
+    height: 10vh;
+  }
+
+  footer hr {
+    width: 92vw;
+    border: 1px solid #595a5c65;
+    margin-top: 8vw;
+    padding-left: 1em;
+  }
+
+  footer p {
+    color: #999ca0;
+    font-family: arial;
+  }
+  footer .colorlib {
+    color: #f7547f;
+  }
+
+  .footer-p {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+/* Tablet Screens */
+
+@media screen and (max-device-width: 768px) {
+  /* Hero Section */
+  body {
+    margin: 0;
+  }
+
+  header {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #f0eed4;
+  }
+
+  .right_overlay {
+    display: none;
+  }
+
+  .left_overlay {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 88vw;
+    z-index: 1001;
+    cursor: pointer;
+    width: 8vw;
+    height: 4.6vh;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -1vh;
+    left: -1vw;
+    background: #ffffff;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    z-index: 999;
+    line-height: 0%;
+  }
+
+  .nav-links li {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    margin-left: -15vw;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  .navbar a {
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 2;
+    text-decoration: none;
+  }
+  .navbar {
+    z-index: 1000;
+    position: fixed;
+    height: 5vh;
+    background-color: white;
+  }
+
+  .hero {
+    width: 80%;
+    height: auto;
+    flex-direction: column-reverse;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    gap: 8vh;
+    position: relative;
+    top: 0vh;
+  }
+
+  .hero-text {
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+  }
+  .banner_img {
+    justify-content: center;
+  }
+  .banner_img img {
+    width: 80%;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-family: "Franklin Gothic Larges", Arial;
+    font-size: 64px;
+    transform: scaleY(1.1);
+    transform: scaleX(0.9);
+    font-weight: 900;
+  }
+  .hero h2 {
+    font-family: "Franklin Gothic Larges", Arial;
+    font-size: 42px;
+    transform: scaleY(1.1);
+    transform: scaleX(0.9);
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  .hero h3 {
+    font-family: "Franklin Gothic Larges", Arial;
+    font-size: 32px;
+    transform: scaleX(1);
+    font-weight: 500;
+  }
+
+  .hero button {
+    font-family: "Franklin Gothic Larges", Arial;
+    width: 28vw;
+    height: 4vh;
+    font-size: 16px;
+    padding: 1vw 2vw;
+    background: #f7547f;
+    box-shadow: 0 1px 8px 0 #f7547f, 0 1px 1px 0 #f7547f;
+    border-radius: 0.5vh;
+    color: whitesmoke;
+    border-style: none;
+    font-family: monospace;
+    cursor: pointer;
+    position: relative;
+    top: 0vh;
+    margin-bottom: 6vh;
+  }
+
+  .hero button:hover {
+    box-shadow: 0 4px 8px 0 #e0a5b4, 0 8px 8px 0 #e0a5b4;
+  }
+  .logo img {
+    width: 25vw;
+    height: auto;
+    position: relative;
+    left: -2vw;
+    top: -1vh;
+  }
+
+  .banner_img {
+    width: 80vw;
+    height: 40vh;
+    position: relative;
+    top: 10vh;
+    height: auto;
+    z-index: 999;
+  }
+  /* Features Section */
+  .features {
+    width: 100%;
+    height: auto;
+    margin: 100px auto;
+  }
+  .features_heading h1 {
+    font-family: "Franklin Gothic Medium";
+    font-size: 18px;
+    text-align: center;
+    color: #f7547f;
+    margin-bottom: 2vh;
+  }
+
+  .heading2 {
+    font-size: 32px;
     text-align: center;
     color: rgba(17, 46, 65, 255);
     margin-bottom: 6vh;
@@ -1983,7 +2874,7 @@ html {
   .block-heading {
     text-align: center;
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 32px;
     font-family: impact;
     margin-top: 3vh;
   }
@@ -2050,7 +2941,7 @@ html {
     position: absolute;
     top: 99.2vw;
     left: 4vw;
-    font-size: 2.65rem;
+    font-size: 42px;
     width: 50vw;
     color: whitesmoke;
     font-weight: bolder;
@@ -2069,9 +2960,9 @@ html {
   .about_article h1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1.1rem;
+    font-size: 18px;
     transform: scaleY(1.1);
-    margin-bottom: 0vh;
+    margin-bottom: 2vh;
     margin-top: 2vh;
     margin-left: 2vw;
     line-height: 0.1;
@@ -2082,13 +2973,12 @@ html {
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.4);
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 32px;
     margin-top: 0vh;
     margin-left: 2vw;
-    margin-bottom: 3vh;
     width: 90vw;
     line-height: 34px;
-    margin-bottom: 0vh;
+    margin-bottom: 2vh;
   }
 
   .about_heading br {
@@ -2104,7 +2994,7 @@ html {
     transform: scaleY(1.1);
     margin-top: 0.1vh;
     margin-bottom: 1vh;
-    font-size: 2rem;
+    font-size: 32px;
     width: 90vw;
     margin-left: 2vw;
     line-height: 34px;
@@ -2113,7 +3003,7 @@ html {
   .about_article p {
     color: #595a5c;
     font-family: arial;
-    font-size: 1.4rem;
+    font-size: 20px;
     line-height: 24px;
     margin-top: 4vh;
     width: 90vw;
@@ -2133,7 +3023,7 @@ html {
     color: whitesmoke;
     border-style: none;
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
     width: 25vw;
     height: 5vh;
@@ -2150,102 +3040,70 @@ html {
     height: auto;
     margin: 0;
     padding-bottom: 10vh;
+    padding-top: 10vh;
   }
   .portfolio .heading1 {
-    font-size: 0.9rem;
+    font-size: 18px;
     text-align: center;
     color: #f7547f;
     font-weight: 800;
     transform: scaleY(1.2);
     font-family: arial;
-    margin: 0vh;
-    margin-top: 5vh;
+    margin: 0%;
+    padding: 0%;
   }
 
-  .portfolio h2 {
-    font-size: 2.5rem;
+  .portfolio .heading2 {
+    font-size: 32px;
     color: #162b45;
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);
     font-weight: 900;
     text-align: center;
-    margin: 1;
-    line-height: 1;
   }
 
   .portfolio .row {
+    width: 98vw;
     display: flex;
     flex-direction: column;
-    width: 98vw;
   }
   .article_1 .article_2 .article_3 {
     width: 100%;
   }
 
-  .row .text-column {
-    width: 98vw;
-    margin: 0;
-    position: relative;
-    left: 0vw;
-    top: 0vh;
-  }
   .text-column br {
     display: none;
   }
-
-  .article_1 .row {
-    margin-top: 8vh;
-  }
-  .article_1 .text-column {
+  .text-column {
     width: 95vw;
-    height: 33vh;
-    text-align: left;
-  }
-  .article_1 .text-column h1 {
+    padding-top: 2em;
+    height: auto;
+    padding-bottom: 2em;
+    align-items: flex-start;
     position: relative;
-    top: 4vh;
+    left: 0vw;
+    right: 0vw;
   }
   .article_2 .row .text-column {
-    width: 95vw;
-    height: 33vh;
-    margin-top: 6vh;
     position: relative;
-    left: 0;
+    left: 0vw;
+    right: 0vw;
   }
-
-  .article_3 .text-column {
-    width: 95vw;
-    height: 33vh;
-    margin-top: 3vh;
-  }
-
   .text-column h1 {
-    font-size: 1rem;
-    text-align: left;
-    margin: 0vh;
+    font-size: 18px;
   }
   .text-column h2 {
-    font-size: 2rem;
-    text-align: left;
-    margin-bottom: 4vh;
-    margin-top: 0vh;
+    font-size: 24px;
   }
 
   .text-column p {
-    font-size: 1.3rem;
-    margin: 0;
-    margin-top: 2vh;
-    color: #595a5c;
-    font-family: arial;
-    line-height: 1.4;
+    font-size: 18px;
+
     padding-right: 2em;
   }
 
   .text-column button {
-    font-size: 1.1rem;
-    position: relative;
-    top: 0vh;
-    left: 0vw;
+    font-size: 18px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -2255,9 +3113,6 @@ html {
   }
 
   .image-column {
-    position: relative;
-    top: 0;
-    left: 0;
     margin: 0;
     padding: 0;
     margin-bottom: 1vh;
@@ -2303,17 +3158,17 @@ html {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 4.6rem;
+    font-size: 74px;
   }
 
   .teamh2 {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.3);
-    font-size: 1.6rem;
-    margin-left: 8vw;
+    font-size: 24px;
+    margin-left: 12vw;
     position: relative;
-    top: -4.2vh;
+    top: -3.2vh;
   }
 
   .team_column img {
@@ -2359,13 +3214,13 @@ html {
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
     margin-top: 2.5vw;
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .profileh2 {
     color: #999ca0;
     font-family: arial;
-    font-size: 1.4rem;
+    font-size: 24px;
     font-weight: 100;
     margin-bottom: 0.6vw;
     margin-top: 0.1vw;
@@ -2374,7 +3229,7 @@ html {
   .profile_column a {
     color: #999ca0;
     font-family: arial;
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: 100;
     text-decoration: none;
   }
@@ -2387,7 +3242,7 @@ html {
 
   .bullet {
     color: #999ca0c1;
-    font-size: 3rem;
+    font-size: 48px;
     position: relative;
     top: 1vh;
     margin-right: 0.7vw;
@@ -2406,7 +3261,7 @@ html {
   .blogh1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 1.1rem;
+    font-size: 18px;
     transform: scaleY(1.2);
     font-weight: 800;
     text-align: center;
@@ -2417,7 +3272,7 @@ html {
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);
     font-weight: 900;
-    font-size: 2.3rem;
+    font-size: 36px;
     text-align: center;
   }
 
@@ -2453,7 +3308,7 @@ html {
     color: #162b45;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 1.7rem;
+    font-size: 28px;
   }
 
   .blog_column-text h1 br {
@@ -2468,7 +3323,7 @@ html {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: 100;
     text-decoration: none;
     line-height: 1;
@@ -2478,7 +3333,7 @@ html {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 1.2rem;
+    font-size: 18px;
     font-weight: 100;
     text-decoration: none;
   }
@@ -2514,7 +3369,7 @@ html {
   }
 
   .logo-text-p {
-    font-size: 1.2rem;
+    font-size: 18px;
     text-align: left;
     color: #999ca0;
     font-family: arial;
@@ -2538,7 +3393,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 2rem;
+    font-size: 32px;
     padding-left: 0.6em;
   }
 
@@ -2546,7 +3401,7 @@ html {
     color: #999ca0;
     text-align: left;
     font-family: arial;
-    font-size: 1.2rem;
+    font-size: 18px;
     margin: 0;
     margin-bottom: 20px;
     padding-left: 1em;
@@ -2581,7 +3436,7 @@ html {
   }
 
   footer input[type="text"] {
-    font-size: 1rem;
+    font-size: 16px;
     color: rgb(255, 255, 255);
     background-color: transparent;
     width: 82vw;
@@ -2591,7 +3446,7 @@ html {
   footer button {
     background-color: #f7547f;
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 16px;
     font-family: "Courier New", Courier, monospace;
     border: none;
     cursor: pointer;
@@ -2617,7 +3472,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 2rem;
+    font-size: 32px;
     padding-left: 0.7em;
   }
 
@@ -2653,7 +3508,7 @@ html {
   }
 
   .footer-p {
-    font-size: 1.2rem;
+    font-size: 20px;
     text-align: center;
   }
 }
@@ -2674,11 +3529,11 @@ html {
     background-color: #f0eed4;
   }
 
-  .overlay_2 {
+  .right_overlay {
     display: none;
   }
 
-  .overlay_1 {
+  .left_overlay {
     display: none;
   }
 
@@ -2712,7 +3567,7 @@ html {
   .nav-links li {
     list-style: none;
     margin: 15px 0;
-    font-size: 1rem;
+    font-size: 16px;
     text-align: center;
     justify-content: center;
     margin-left: -15vw;
@@ -2722,7 +3577,7 @@ html {
     display: flex;
   }
   .navbar a {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 100;
     line-height: 2;
     text-decoration: none;
@@ -2749,6 +3604,7 @@ html {
   .hero-text {
     width: 100%;
     height: auto;
+    margin-top: 2em;
   }
 
   .banner_img img {
@@ -2759,19 +3615,17 @@ html {
   h2,
   h3,
   button {
-    position: relative;
-    top: 4vh;
     font-family: "Franklin Gothic Larges", Arial;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 48px;
     transform: scaleY(1.1);
     transform: scaleX(0.9);
     font-weight: 900;
   }
   .hero h2 {
-    font-size: 1.6rem;
+    font-size: 24px;
     transform: scaleY(1.1);
     transform: scaleX(0.9);
     font-weight: 900;
@@ -2779,7 +3633,7 @@ html {
   }
 
   .hero h3 {
-    font-size: 1rem;
+    font-size: 16px;
     transform: scaleX(1);
     font-weight: 500;
   }
@@ -2787,7 +3641,7 @@ html {
   .hero button {
     width: 28vw;
     height: 4vh;
-    font-size: 0.8rem;
+    font-size: 14px;
     padding: 1vw 2vw;
     background: #f7547f;
     box-shadow: 0 1px 8px 0 #f7547f, 0 1px 1px 0 #f7547f;
@@ -2814,7 +3668,7 @@ html {
 
   .banner_img {
     width: 80vw;
-    height: 40vh;
+    height: auto;
     position: relative;
     top: 10vh;
     height: auto;
@@ -2828,14 +3682,14 @@ html {
   }
   .features_heading h1 {
     font-family: "Franklin Gothic Medium";
-    font-size: 0.9rem;
+    font-size: 16px;
     text-align: center;
     color: #f7547f;
     margin-bottom: 2vh;
   }
 
   .heading2 {
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
     color: rgba(17, 46, 65, 255);
     margin-bottom: 6vh;
@@ -2869,7 +3723,7 @@ html {
   .block-heading {
     text-align: center;
     color: whitesmoke;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: impact;
     margin-top: 3vh;
   }
@@ -2878,7 +3732,7 @@ html {
     color: #91959a;
     text-align: center;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.7;
     margin-top: 2vh;
   }
@@ -2937,7 +3791,7 @@ html {
     position: absolute;
     top: 95.2vw;
     left: 4vw;
-    font-size: 1.65rem;
+    font-size: 26px;
     width: 50vw;
     color: whitesmoke;
     font-weight: bolder;
@@ -2947,20 +3801,18 @@ html {
   .about_article {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: auto;
     text-align: left;
     width: 100%;
-    margin: 0;
+    margin: 0%;
   }
 
   .about_article h1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 0.8rem;
+    font-size: 16px;
     transform: scaleY(1.1);
-    margin-bottom: 0;
-    margin-top: 2vh;
-    margin-left: 2vw;
   }
 
   .about_heading {
@@ -2968,12 +3820,9 @@ html {
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.4);
     font-weight: 900;
-    font-size: 1.2rem;
-    margin-top: 0vh;
-    margin-left: 2vw;
+    font-size: 20px;
     width: 90vw;
     line-height: 24px;
-    margin-bottom: 0vh;
   }
 
   .about_heading br {
@@ -2987,22 +3836,20 @@ html {
     color: #1c3758;
     font-family: "Franklin Gothic medium";
     transform: scaleY(1.1);
-    margin-top: -1vh;
-    margin-bottom: 1vh;
-    font-size: 1.3rem;
+
+    font-size: 20px;
     width: 90vw;
-    margin-left: 2vw;
+
     line-height: 24px;
   }
 
   .about_article p {
     color: #595a5c;
     font-family: arial;
-    font-size: 0.9rem;
+    font-size: 16px;
     line-height: 24px;
-    margin-top: 4vh;
+
     width: 90vw;
-    margin-left: 2vw;
   }
 
   .about_article p br {
@@ -3011,17 +3858,17 @@ html {
 
   .about_article button {
     margin-top: 0.4vw;
-    padding: 1vw 2vw;
+    padding: 0%;
     background: #f7547f;
     box-shadow: 0 1px 8px 0 #f7547f, 0 1px 1px 0 #f7547f;
     border-radius: 0.5px;
     color: whitesmoke;
     border-style: none;
     font-family: monospace;
-    font-size: 0.8rem;
+    font-size: 14px;
     cursor: pointer;
-    width: 25vw;
-    height: 5vh;
+    width: 26vw;
+    height: 4vh;
     margin-left: 2vw;
     position: relative;
     top: 0;
@@ -3037,109 +3884,74 @@ html {
     padding-bottom: 10vh;
   }
   .portfolio .heading1 {
-    font-size: 0.8rem;
+    font-size: 14px;
     text-align: center;
     color: #f7547f;
     font-weight: 800;
     transform: scaleY(1.2);
     font-family: arial;
-    margin: 0vh;
     margin-top: 4vh;
   }
 
-  .portfolio h2 {
-    font-size: 1.5rem;
+  .portfolio .heading2 {
+    font-size: 24px;
     color: #162b45;
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);
     font-weight: 900;
     text-align: center;
-    margin: 1;
-    line-height: 1;
   }
 
   .portfolio .row {
-    display: flex;
-    flex-direction: column;
     width: 98vw;
   }
   .article_1 .article_2 .article_3 {
     width: 100%;
   }
 
-  .row .text-column {
-    width: 98vw;
-    margin: 0;
-    position: relative;
-    left: 0vw;
-    top: 0vh;
-    height: auto;
-  }
   .text-column br {
     display: none;
   }
-
-  .article_1 .row {
-    margin-top: 8vh;
-  }
-  .article_1 .text-column {
+  .text-column {
+    display: flex;
+    flex-direction: column;
     width: 95vw;
-
-    text-align: left;
-  }
-
-  .article_2 .row .text-column {
-    width: 95vw;
+    margin: 0;
+    padding-top: 2em;
     height: auto;
-    margin: 0;
-    position: relative;
-    left: 0;
+    padding-bottom: 2em;
   }
-
-  .article_3 .text-column {
-    width: 95vw;
-    margin: 0;
+  .text-column .col {
+    display: flex;
   }
 
   .text-column h1 {
-    font-size: 0.8rem;
+    font-size: 14px;
     text-align: left;
   }
   .text-column h2 {
-    font-size: 1rem;
+    font-size: 16px;
     text-align: left;
-    margin: 0;
-    margin-bottom: 4vh;
   }
 
   .text-column p {
-    font-size: 0.8rem;
-    margin: 0;
-    margin-top: 0.5vh;
+    font-size: 14px;
     color: #595a5c;
     font-family: arial;
-    line-height: 1.4;
     padding-right: 2em;
   }
 
   .text-column button {
-    font-size: 0.8rem;
-    position: relative;
-    top: 0vh;
-    left: 0vw;
+    font-size: 14px;
     background: transparent;
     border: none;
     cursor: pointer;
     text-align: left;
     color: #162b45;
     font-family: "Franklin Gothic medium", sans-serif;
-    margin-bottom: 1vh;
   }
 
   .image-column {
-    position: relative;
-    top: 0;
-    left: 0;
     margin: 0;
     padding: 0;
     margin-bottom: 1vh;
@@ -3150,6 +3962,7 @@ html {
     width: 95vw;
     margin: 0;
   }
+
   /* Team Section */
 
   .team {
@@ -3184,17 +3997,17 @@ html {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 2.8rem;
+    font-size: 44px;
   }
 
   .teamh2 {
     color: whitesmoke;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.3);
-    font-size: 1rem;
-    margin-left: 10vw;
+    font-size: 18px;
+    margin-left: 20%;
     position: relative;
-    top: -3.2vh;
+    top: -2.8vh;
   }
 
   .team_column img {
@@ -3240,13 +4053,13 @@ html {
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
     margin-top: 2.5vw;
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 
   .profileh2 {
     color: #999ca0;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 100;
     margin-bottom: 0.6vw;
     margin-top: 0.1vw;
@@ -3255,7 +4068,7 @@ html {
   .profile_column a {
     color: #999ca0;
     font-family: arial;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 100;
     text-decoration: none;
   }
@@ -3268,7 +4081,7 @@ html {
 
   .bullet {
     color: #999ca0c1;
-    font-size: 3rem;
+    font-size: 48px;
     position: relative;
     top: 1vh;
     margin-right: 0.7vw;
@@ -3289,7 +4102,7 @@ html {
   .blogh1 {
     color: #f7547f;
     font-family: arial;
-    font-size: 0.8rem;
+    font-size: 14px;
     transform: scaleY(1.2);
     font-weight: 800;
     text-align: center;
@@ -3300,7 +4113,7 @@ html {
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 24px;
     text-align: center;
   }
 
@@ -3335,7 +4148,7 @@ html {
     color: #162b45;
     font-family: "Franklin Gothic medium", sans-serif;
     transform: scaleY(1.2);
-    font-size: 1.2rem;
+    font-size: 20px;
   }
 
   .blog_column-text h1 br {
@@ -3350,7 +4163,7 @@ html {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 0.9rem;
+    font-size: 16px;
     font-weight: 100;
     text-decoration: none;
     line-height: 1;
@@ -3360,7 +4173,7 @@ html {
     text-align: left;
     color: #999ca0;
     font-family: arial;
-    font-size: 0.9rem;
+    font-size: 16px;
     font-weight: 100;
     text-decoration: none;
   }
@@ -3389,7 +4202,7 @@ html {
   }
 
   .logo-text-p {
-    font-size: 0.9rem;
+    font-size: 16px;
     text-align: left;
     color: #999ca0;
     font-family: arial;
@@ -3412,7 +4225,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 1.5rem;
+    font-size: 24px;
     padding-left: 0.6em;
   }
 
@@ -3420,7 +4233,7 @@ html {
     color: #999ca0;
     text-align: left;
     font-family: arial;
-    font-size: 0.9rem;
+    font-size: 16px;
     margin: 0;
     margin-bottom: 20px;
     padding-left: 1em;
@@ -3455,7 +4268,7 @@ html {
   }
 
   footer input[type="text"] {
-    font-size: 1rem;
+    font-size: 16px;
     color: rgb(255, 255, 255);
     background-color: transparent;
     width: 77vw;
@@ -3465,7 +4278,7 @@ html {
   footer button {
     background-color: #f7547f;
     color: whitesmoke;
-    font-size: 1rem;
+    font-size: 16px;
     font-family: "Courier New", Courier, monospace;
     border: none;
     cursor: pointer;
@@ -3489,7 +4302,7 @@ html {
     color: whitesmoke;
     text-align: left;
     font-family: "Franklin Gothic larges", "Arial Narrow";
-    font-size: 1.5rem;
+    font-size: 24px;
     padding-left: 1em;
   }
 
@@ -3519,7 +4332,7 @@ html {
   .footer-p {
     color: #999ca0;
     font-family: arial;
-    font-size: 0.8rem;
+    font-size: 14px;
     text-align: center;
   }
   footer .colorlib {
