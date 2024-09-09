@@ -291,81 +291,98 @@
       <!-- Team Section -->
       <section class="team">
         <header>
-          <div class="team_row">
-            <div class="team_column">
-              <img src="assets/content/team/icon1.png" />
-              <h1>85</h1>
-
-              <div class="teamh2 uppercase">
-                satisfied<br />
-                client
-              </div>
-            </div>
-
-            <div class="team_column">
-              <img src="assets/content/team/icon2.png" />
-              <h1>95</h1>
-
-              <div class="teamh2 uppercase">
-                total<br />
-                project
-              </div>
-            </div>
-            <div class="team_column">
-              <img src="assets/content/team/icon3.png" />
-              <h1>75</h1>
-
-              <div class="teamh2 uppercase">work <br />completed</div>
-            </div>
-            <div class="team_column">
-              <img src="assets/content/team/icon4.png" />
-              <h1>95</h1>
-
-              <div class="teamh2 uppercase">work <br />completed</div>
-            </div>
-          </div>
+          <div class="team_row" id="team_row"></div>
         </header>
-        <div class="profile_container">
-          <div class="profile_row">
-            <div class="profile_column">
-              <img src="assets/content/team/team_1.png" />
-              <h1>Jhosef Williams</h1>
-              <div class="profileh2">Web developer</div>
-              <p>
-                <a href=""> Facebook </a>
-                <span class="bullet"> • </span>
-                <a href=""> Twitter </a>
-                <span class="bullet"> • </span>
-                <a href=""> Skype </a>
-              </p>
-            </div>
-            <div class="profile_column">
-              <img src="assets/content/team/team_2.png" />
-              <h1>Daniel Hancock</h1>
-              <div class="profileh2">Web developer</div>
-              <p>
-                <a href=""> Facebook </a>
-                <span class="bullet"> • </span>
-                <a href=""> Twitter </a>
-                <span class="bullet"> • </span>
-                <a href=""> Skype </a>
-              </p>
-            </div>
-            <div class="profile_column">
-              <img src="assets/content/team/team_3.png" />
-              <h1>Bernard Perales</h1>
-              <div class="profileh2">Web developer</div>
-              <p>
-                <a href=""> Facebook </a>
-                <span class="bullet"> • </span>
-                <a href=""> Twitter </a>
-                <span class="bullet">• </span>
-                <a href=""> Skype </a>
-              </p>
-            </div>
-          </div>
-        </div>
+        <div class="profile_container" id="profile_container"></div>
       </section>
+
+      <script>
+        const team_titles = [
+          "satisfied client",
+          "total project",
+          "work completed",
+          "work completed",
+        ];
+        const team_numeric = [85, 95, 75, 95];
+        const team_icons = [
+          "assets/content/team/icon1.png",
+          "assets/content/team/icon2.png",
+          "assets/content/team/icon3.png",
+          "assets/content/team/icon4.png",
+        ];
+
+        const teamRow = document.getElementById("team_row");
+
+        const heading1_team = document.createElement("div");
+
+        for (let i = 0; i < team_icons.length; i++) {
+          const teamColumn = document.createElement("div");
+          teamColumn.classList.add("team_column");
+
+          const teamImg = document.createElement("img");
+          teamImg.src = team_icons[i];
+
+          const heading1_team = document.createElement("h1");
+          heading1_team.textContent = team_numeric[i];
+
+          const heading2_team = document.createElement("div");
+          heading2_team.textContent = team_titles[i];
+          heading2_team.classList.add("teamh2", "uppercase");
+
+          teamColumn.appendChild(teamImg);
+          teamColumn.appendChild(heading1_team);
+          teamColumn.appendChild(heading2_team);
+
+          teamRow.appendChild(teamColumn);
+        }
+        const profileContainer = document.getElementById("profile_container");
+
+        const profileRow = document.createElement("div");
+        profileRow.classList.add("profile_row");
+
+        const profileImgs = [
+          "assets/content/team/team_1.png",
+          "assets/content/team/team_2.png",
+          "assets/content/team/team_3.png",
+        ];
+
+        const profileNames = [
+          "Jhosef Williams",
+          "Daniel Hancock",
+          "Bernard Perales",
+        ];
+
+        const profileRole = "Web developer";
+        for (let i = 0; i < profileImgs.length; i++) {
+          const profileColumn = document.createElement("div");
+          profileColumn.classList.add("profile_column");
+
+          const profileImages = document.createElement("img");
+          profileImages.src = profileImgs[i];
+
+          const names = document.createElement("h1");
+          names.textContent = profileNames[i];
+
+          const designation = document.createElement("div");
+          designation.classList.add("profileh2");
+          designation.textContent = profileRole;
+
+          const profilePara = document.createElement("p");
+          profilePara.innerHTML = ` <a href=""> Facebook </a>
+                <span class="bullet"> • </span>
+                <a href=""> Twitter </a>
+                <span class="bullet"> • </span>
+                <a href=""> Skype </a>`;
+          profileColumn.appendChild(profileImages);
+          profileColumn.appendChild(names);
+          profileColumn.appendChild(designation);
+          profileColumn.appendChild(profilePara);
+
+          profileRow.appendChild(profileColumn);
+
+          profileContainer.appendChild(profileRow);
+        }
+      </script>
 
       <!-- Blog Section -->
       <section class="blog">
