@@ -175,119 +175,151 @@
       </section>
 
       <!-- Portfolio Section -->
-      <section class="portfolio">
+      <section class="portfolio" id="portfolioSection">
         <h1 class="heading1 uppercase">recent work</h1>
         <h2 class="heading2">Creative work for client</h2>
-
-        <article class="article_1">
-          <div class="row">
-            <div class="text-column">
-              <div class="col">
-                <h1 class="uppercase">mockup design</h1>
-              </div>
-              <div class="col">
-                <h2>
-                  It under itself day whales waters our divide third <br />
-                  brought
-                </h2>
-              </div>
-              <div class="col">
-                <p>
-                  Place isn't heaven firmament divided shall fruitful bring
-                  bring may midst every a night dry herb. Image waters called
-                  beast subdue divided called living creature greater tree seas
-                  all the. Hath multiply female you're male likeness his made
-                  open beast seas living moved, form. Void stars you our
-                  dominion
-                </p>
-              </div>
-              <div class="col">
-                <button type="button">LEARN MORE →</button>
-              </div>
-            </div>
-            <div class="image-column">
-              <aside class="aside_1">
-                <img
-                  src="assets/content/portfolio/demo_1.png"
-                  class="right_img"
-                />
-              </aside>
-            </div>
-          </div>
-        </article>
-
-        <article class="article_2">
-          <div class="row">
-            <div class="image-column">
-              <aside>
-                <img
-                  src="assets/content/portfolio/demo_2.png"
-                  class="left_img"
-                />
-              </aside>
-            </div>
-            <div class="text-column">
-              <div class="col">
-                <h1 class="uppercase">mockup design</h1>
-              </div>
-              <div class="col">
-                <h2>
-                  Saw i very dominion whose female was light <br />
-                  divided multiply
-                </h2>
-              </div>
-              <div class="col">
-                <p>
-                  Place isn't heaven firmament divided shall fruitful bring
-                  bring may midst every a night dry herb. Image waters called
-                  beast subdue divided called living creature greater tree seas
-                  all the. Hath multiply female you're male likeness his made
-                  open beast seas living moved, form. Void stars you our
-                  dominion
-                </p>
-              </div>
-              <div class="col"><button type="button">LEARN MORE →</button></div>
-            </div>
-          </div>
-        </article>
-
-        <article class="article_3">
-          <div class="row">
-            <div class="text-column">
-              <div class="col">
-                <h1 class="uppercase">mockup design</h1>
-              </div>
-              <div class="col">
-                <h2>
-                  It under itself day whales waters our divide third <br />
-                  brought
-                </h2>
-              </div>
-              <div class="col">
-                <p>
-                  Place isn't heaven firmament divided shall fruitful bring
-                  bring may midst every a night dry herb. Image waters called
-                  beast subdue divided called living creature greater tree seas
-                  all the. Hath multiply female you're male likeness his made
-                  open beast seas living moved, form. Void stars you our
-                  dominion
-                </p>
-              </div>
-              <div class="col">
-                <button type="button">LEARN MORE →</button>
-              </div>
-            </div>
-            <div class="image-column">
-              <aside>
-                <img
-                  src="assets/content/portfolio/demo_3.png"
-                  class="right_img"
-                />
-              </aside>
-            </div>
-          </div>
-        </article>
       </section>
+
+      <script>
+        const heading1 = "mockup design";
+        const heading2 = [
+          " It under itself day whales waters our divide third brought",
+          "Saw I very dominion whose female was light divided multiply",
+        ];
+
+        const paragraph =
+          "Place isn't heaven firmament divided shall fruitful bring bring may midst every a night dry herb. Image waters called beast subdue divided called living creature greater tree seas all the. Hath multiply female you're male likeness his made open beast seas living moved, form. Void stars you our dominion";
+        const portfolioImages = [
+          "assets/content/portfolio/demo_1.png",
+          "assets/content/portfolio/demo_2.png",
+          "assets/content/portfolio/demo_3.png",
+        ];
+
+        const portfolioSection = document.getElementById("portfolioSection");
+
+        for (let i = 0; i < 3; i++) {
+          const articles = document.createElement("article");
+          articles.classList.add(`article_${i + 1}`);
+
+          const articleRow = document.createElement("div");
+          articleRow.classList.add("row");
+
+          // If the index is even, we display text first, else image first
+          if (i % 2 === 0) {
+            // Text Column
+            const textColumn = document.createElement("div");
+            textColumn.classList.add("text-column");
+
+            const col1 = document.createElement("div");
+            col1.classList.add("col");
+
+            const head1 = document.createElement("h1");
+            head1.textContent = heading1;
+            head1.classList.add("uppercase");
+            col1.appendChild(head1);
+
+            const col2 = document.createElement("div");
+            col2.classList.add("col");
+
+            const head2 = document.createElement("h2");
+            head2.textContent = heading2[0];
+            col2.appendChild(head2);
+
+            const col3 = document.createElement("div");
+            col3.classList.add("col");
+
+            const para = document.createElement("p");
+            para.textContent = paragraph;
+            col3.appendChild(para);
+
+            const col4 = document.createElement("div");
+            col4.classList.add("col");
+
+            const button = document.createElement("button");
+            button.textContent = "LEARN MORE →";
+            col4.appendChild(button);
+
+            textColumn.appendChild(col1);
+            textColumn.appendChild(col2);
+            textColumn.appendChild(col3);
+            textColumn.appendChild(col4);
+
+            // Image Column
+            const imageColumn = document.createElement("div");
+            imageColumn.classList.add("image-column");
+            const portAside = document.createElement("aside");
+            const portImages = document.createElement("img");
+            portImages.src = portfolioImages[i];
+            portImages.classList.add("right_img");
+
+            portAside.appendChild(portImages);
+            imageColumn.appendChild(portAside);
+
+            articleRow.appendChild(textColumn);
+            articleRow.appendChild(imageColumn);
+          } else {
+            // Image Column First
+            const imageColumn = document.createElement("div");
+            imageColumn.classList.add("image-column");
+            const portAside = document.createElement("aside");
+            const portImages = document.createElement("img");
+            portImages.src = portfolioImages[i];
+            portImages.classList.add("left_img");
+
+            portAside.appendChild(portImages);
+            imageColumn.appendChild(portAside);
+
+            // Text Column
+            const textColumn = document.createElement("div");
+            textColumn.classList.add("text-column");
+
+            const col1 = document.createElement("div");
+            col1.classList.add("col");
+
+            const head1 = document.createElement("h1");
+            head1.textContent = heading1;
+            head1.classList.add("uppercase");
+
+            col1.appendChild(head1);
+
+            const col2 = document.createElement("div");
+            col2.classList.add("col");
+
+            const head2 = document.createElement("h2");
+            head2.textContent = heading2[1];
+
+            col2.appendChild(head2);
+
+            const col3 = document.createElement("div");
+            col3.classList.add("col");
+
+            const para = document.createElement("p");
+            para.textContent = paragraph;
+            col3.appendChild(para);
+
+            const col4 = document.createElement("div");
+            col4.classList.add("col");
+
+            const button = document.createElement("button");
+            button.textContent = "LEARN MORE →";
+
+            col4.appendChild(button);
+
+            textColumn.appendChild(col1);
+            textColumn.appendChild(col2);
+            textColumn.appendChild(col3);
+            textColumn.appendChild(col4);
+
+            articleRow.appendChild(imageColumn);
+            articleRow.appendChild(textColumn);
+          }
+
+          articles.appendChild(articleRow);
+
+          portfolioSection.appendChild(articles);
+        }
+      </script>
+
       <!-- Team Section -->
       <section class="team">
         <header>
@@ -454,111 +486,158 @@
         }
       </script>
     </main>
-    <!-- Footer -->
+
     <footer>
-      <div class="footer-row">
-        <div class="col">
-          <img src="assets/footer/footer_logo.png" class="logo-text-img" />
-          <p class="logo-text-p">
-            But when shot real her. Chamber her one <br />
-            visite removal six sending <br class="break1" />
-            himself boys <br />
-            scot exquisite existend an <br />
-            <br class="break" />
-            <br class="break" />
-            But when shot real her hamber her
-          </p>
-        </div>
-        <div class="col">
-          <h1 class="form-heading">Newsletter</h1>
-          <p class="form-p">
-            Stay updated with our latest trends Seed heaven so said <br />
-            place winged over given forth fruit.
-          </p>
-          <form id="newsletter" onsubmit="storedata(event)">
-            <div class="form">
-              <div class="input">
-                <input
-                  type="text"
-                  id="email"
-                  required
-                  autocomplete="on"
-                  placeholder="Enter email address"
-                />
-                <div class="form-btn">
-                  <button type="submit">></button>
-                </div>
-              </div>
-            </div>
-          </form>
-
-          <p>
-            <a href="">
-              <img
-                src="assets/footer/icon1.png"
-                alt="Facebook"
-                class="links-img"
-              />
-            </a>
-
-            <a href="">
-              <img
-                src="assets/footer/icon2.png"
-                alt="Twitter"
-                class="links-img"
-              />
-            </a>
-
-            <a href="">
-              <img
-                src="assets/footer/icon3.png"
-                alt="Instagram"
-                class="links-img"
-              />
-            </a>
-
-            <a>
-              <img
-                src="assets/footer/icon4.png"
-                alt="Skype"
-                class="links-img"
-              />
-            </a>
-          </p>
-        </div>
-        <div class="col">
-          <h1 class="insta-heading">Instagram</h1>
-          <div class="insta_row">
-            <div class="insta_col">
-              <img src="assets/footer/pic1.jpg" alt="pic1" />
-            </div>
-            <div class="insta_col">
-              <img src="assets/footer/pic2.png" alt="pic2" />
-            </div>
-            <div class="insta_col">
-              <img src="assets/footer/pic3.jpg" alt="pic3" />
-            </div>
-          </div>
-
-          <div class="insta_row">
-            <div class="insta_col">
-              <img src="assets/footer/pic4.png" alt="pic4" />
-            </div>
-            <div class="insta_col">
-              <img src="assets/footer/pic5.jpg" alt="pic5" />
-            </div>
-            <div class="insta_col">
-              <img src="assets/footer/pic6.jpg" alt="pic6" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="footer-row" id="footer_Row"></div>
       <hr />
       <p class="footer-p">
         Copyright ©2021 All rights reserved | This template is made with
         &hearts; by <span class="colorlib"> Colorlib </span>
       </p>
     </footer>
+    <script>
+      const newsText =
+        "Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.";
+
+      const footerHeadings = ["Newsletter", "Instagram"];
+      const footerLogo = "assets/footer/footer_logo.png";
+      const socialLinks = [
+        "assets/footer/icon1.png",
+        "assets/footer/icon2.png",
+        "assets/footer/icon3.png",
+        "assets/footer/icon4.png",
+      ];
+
+      const instaFeed = [
+        "assets/footer/pic1.jpg",
+        "assets/footer/pic2.png",
+        "assets/footer/pic3.jpg",
+        "assets/footer/pic4.png",
+        "assets/footer/pic5.jpg",
+        "assets/footer/pic6.jpg",
+      ];
+
+      const footerRow = document.getElementById("footer_Row");
+
+      //first column with logo and text
+      const logoColumn = document.createElement("div");
+      logoColumn.classList.add("col");
+
+      const logoImg = document.createElement("img");
+      logoImg.src = footerLogo;
+      logoImg.classList.add("logo-text-img");
+
+      const logoTextP = document.createElement("p");
+      logoTextP.classList.add("logo-text-p");
+      logoTextP.innerHTML = ` But when shot real her. Chamber her one <br />
+            visite removal six sending <br class="break1" />
+            himself boys <br />
+            scot exquisite existend an <br />
+            <br class="break" />
+            <br class="break" />
+            But when shot real her hamber her`;
+
+      logoColumn.appendChild(logoImg);
+      logoColumn.appendChild(logoTextP);
+
+      //second column with newsletter form
+      const newsletterColumn = document.createElement("div");
+      newsletterColumn.classList.add("col");
+
+      const newsletterHeading = document.createElement("h1");
+      newsletterHeading.classList.add("form-heading");
+      newsletterHeading.innerText = footerHeadings[0];
+
+      const newsletterText = document.createElement("p");
+      newsletterText.classList.add("form-p");
+      newsletterText.innerHTML = newsText;
+
+      const form = document.createElement("form");
+      form.id = "newsletter";
+      form.onsubmit = function (event) {
+        storedata(event);
+      };
+
+      const formDiv = document.createElement("div");
+      formDiv.classList.add("form");
+
+      const inputDiv = document.createElement("div");
+      inputDiv.classList.add("input");
+
+      const emailInput = document.createElement("input");
+      emailInput.type = "text";
+      emailInput.id = "email";
+      emailInput.required = true;
+      emailInput.autocomplete = "on";
+      emailInput.placeholder = "Enter email address";
+
+      const buttonDiv = document.createElement("div");
+      buttonDiv.classList.add("form-btn");
+
+      const submitButton = document.createElement("button");
+      submitButton.type = "submit";
+      submitButton.innerText = ">";
+
+      buttonDiv.appendChild(submitButton);
+      inputDiv.appendChild(emailInput);
+      inputDiv.appendChild(buttonDiv);
+      formDiv.appendChild(inputDiv);
+      form.appendChild(formDiv);
+
+      newsletterColumn.appendChild(newsletterHeading);
+      newsletterColumn.appendChild(newsletterText);
+      newsletterColumn.appendChild(form);
+
+      const socialDiv = document.createElement("p");
+
+      for (let i = 0; i < socialLinks.length; i++) {
+        const aTag = document.createElement("a");
+        const imgTag = document.createElement("img");
+
+        imgTag.src = socialLinks[i];
+        imgTag.classList.add("links-img");
+
+        aTag.appendChild(imgTag);
+        socialDiv.appendChild(aTag);
+      }
+
+      newsletterColumn.appendChild(socialDiv);
+
+      // Create third column for Instagram feed
+      const instaColumn = document.createElement("div");
+      instaColumn.classList.add("col");
+
+      const instaHeading = document.createElement("h1");
+      instaHeading.classList.add("insta-heading");
+      instaHeading.innerText = footerHeadings[1];
+
+      instaColumn.appendChild(instaHeading);
+
+      for (let i = 0; i < 2; i++) {
+        const instaFeedRow = document.createElement("div");
+        instaFeedRow.classList.add("insta_row");
+
+        let start = i * 3;
+        let end = start + 3;
+
+        for (let j = start; j < end; j++) {
+          const instaFeedCol = document.createElement("div");
+          instaFeedCol.classList.add("insta_col");
+
+          const FeedImages = document.createElement("img");
+          FeedImages.src = instaFeed[j];
+
+          instaFeedCol.appendChild(FeedImages);
+          instaFeedRow.appendChild(instaFeedCol);
+        }
+
+        instaColumn.appendChild(instaFeedRow);
+      }
+
+      footerRow.appendChild(logoColumn);
+      footerRow.appendChild(newsletterColumn);
+      footerRow.appendChild(instaColumn);
+    </script>
 
     <script
       src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
