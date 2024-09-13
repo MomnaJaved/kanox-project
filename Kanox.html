@@ -181,14 +181,18 @@
       </section>
 
       <script>
-        const heading1 = "mockup design";
-        const heading2 = [
+        const topHeading = ["mockup design", "mockup design", "mockup design"];
+        const subHeading = [
           " It under itself day whales waters our divide third brought",
           "Saw I very dominion whose female was light divided multiply",
+          " It under itself day whales waters our divide third brought",
         ];
 
-        const paragraph =
-          "Place isn't heaven firmament divided shall fruitful bring bring may midst every a night dry herb. Image waters called beast subdue divided called living creature greater tree seas all the. Hath multiply female you're male likeness his made open beast seas living moved, form. Void stars you our dominion";
+        const paragraph = [
+          "Place isn't heaven firmament divided shall fruitful bring bring may midst every a night dry herb. Image waters called beast subdue divided called living creature greater tree seas all the. Hath multiply female you're male likeness his made open beast seas living moved, form. Void stars you our dominion",
+          "Place isn't heaven firmament divided shall fruitful bring bring may midst every a night dry herb. Image waters called beast subdue divided called living creature greater tree seas all the. Hath multiply female you're male likeness his made open beast seas living moved, form. Void stars you our dominion",
+          "Place isn't heaven firmament divided shall fruitful bring bring may midst every a night dry herb. Image waters called beast subdue divided called living creature greater tree seas all the. Hath multiply female you're male likeness his made open beast seas living moved, form. Void stars you our dominion",
+        ];
         const portfolioImages = [
           "assets/content/portfolio/demo_1.png",
           "assets/content/portfolio/demo_2.png",
@@ -196,7 +200,14 @@
         ];
 
         const portfolioSection = document.getElementById("portfolioSection");
-        function text_Column(i, heading1, heading2, paragraph) {
+
+        function CreateRow(
+          i,
+          topHeading,
+          subHeading,
+          paragraph,
+          portfolioImage
+        ) {
           // Text Column
           const textColumn = document.createElement("div");
           textColumn.classList.add("text-column");
@@ -204,18 +215,17 @@
           const col1 = document.createElement("div");
           col1.classList.add("col");
 
-          const head1 = document.createElement("h1");
-          head1.textContent = heading1;
-          head1.classList.add("uppercase");
-          col1.appendChild(head1);
+          const top_heading = document.createElement("h1");
+          top_heading.textContent = topHeading;
+          top_heading.classList.add("uppercase");
+          col1.appendChild(top_heading);
 
           const col2 = document.createElement("div");
           col2.classList.add("col");
 
-          const head2 = document.createElement("h2");
-
-          head2.textContent = heading2[i];
-          col2.appendChild(head2);
+          const sub_heading = document.createElement("h2");
+          sub_heading.textContent = subHeading;
+          col2.appendChild(sub_heading);
 
           const col3 = document.createElement("div");
           col3.classList.add("col");
@@ -236,49 +246,47 @@
           textColumn.appendChild(col3);
           textColumn.appendChild(col4);
 
-          return textColumn;
-        }
-
-        function image_Column(i, portfolioImages) {
           // Image Column
           const imageColumn = document.createElement("div");
           imageColumn.classList.add("image-column");
 
           const portAside = document.createElement("aside");
           const portImages = document.createElement("img");
-          portImages.src = portfolioImages[i];
+          portImages.src = portfolioImage;
           portImages.classList.add("right_img");
 
           portAside.appendChild(portImages);
           imageColumn.appendChild(portAside);
 
-          return imageColumn;
+          // If the index is even, we display text first, else image first
+          const articleRow = document.createElement("div");
+          articleRow.classList.add("row");
+
+          if (i % 2 === 0) {
+            // Text column first, then image column
+            articleRow.appendChild(textColumn);
+            articleRow.appendChild(imageColumn);
+          } else {
+            // Image column first, then text column
+            articleRow.appendChild(imageColumn);
+            articleRow.appendChild(textColumn);
+          }
+          return articleRow;
         }
 
         for (let i = 0; i < 3; i++) {
           const articles = document.createElement("article");
           articles.classList.add(`article_${i + 1}`);
 
-          const articleRow = document.createElement("div");
-          articleRow.classList.add("row");
-
-          // If the index is even, we display text first, else image first
-          if (i % 2 === 0) {
-            // Text column first, then image column
-            articleRow.appendChild(
-              text_Column(0, heading1, heading2, paragraph)
-            );
-            articleRow.appendChild(image_Column(i, portfolioImages));
-          } else {
-            // Image column first, then text column
-            articleRow.appendChild(image_Column(i, portfolioImages));
-            articleRow.appendChild(
-              text_Column(1, heading1, heading2, paragraph)
-            );
-          }
+          const articleRow = CreateRow(
+            i,
+            topHeading[i],
+            subHeading[i],
+            paragraph[i],
+            portfolioImages[i]
+          );
 
           articles.appendChild(articleRow);
-
           portfolioSection.appendChild(articles);
         }
       </script>
