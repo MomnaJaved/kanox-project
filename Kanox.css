@@ -1352,7 +1352,7 @@ html {
   }
   .image-column img {
     width: 50vw;
-    height: 50vh;
+    height: auto;
   }
 
   .text-column {
@@ -1361,7 +1361,7 @@ html {
     justify-content: space-between;
     justify-items: left;
     height: auto;
-    width: 30vw;
+    width: 28vw;
   }
   .text-column h1 {
     margin-top: 2vh;
@@ -1376,7 +1376,6 @@ html {
   .text-column h2 {
     font-size: 24px;
     text-align: left;
-
     color: #162b45;
     font-family: "Franklin Gothic large", sans-serif;
     transform: scaleY(1.3);

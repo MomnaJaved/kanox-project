@@ -196,6 +196,64 @@
         ];
 
         const portfolioSection = document.getElementById("portfolioSection");
+        function text_Column(i, heading1, heading2, paragraph) {
+          // Text Column
+          const textColumn = document.createElement("div");
+          textColumn.classList.add("text-column");
+
+          const col1 = document.createElement("div");
+          col1.classList.add("col");
+
+          const head1 = document.createElement("h1");
+          head1.textContent = heading1;
+          head1.classList.add("uppercase");
+          col1.appendChild(head1);
+
+          const col2 = document.createElement("div");
+          col2.classList.add("col");
+
+          const head2 = document.createElement("h2");
+
+          head2.textContent = heading2[i];
+          col2.appendChild(head2);
+
+          const col3 = document.createElement("div");
+          col3.classList.add("col");
+
+          const para = document.createElement("p");
+          para.textContent = paragraph;
+          col3.appendChild(para);
+
+          const col4 = document.createElement("div");
+          col4.classList.add("col");
+
+          const button = document.createElement("button");
+          button.textContent = "LEARN MORE →";
+          col4.appendChild(button);
+
+          textColumn.appendChild(col1);
+          textColumn.appendChild(col2);
+          textColumn.appendChild(col3);
+          textColumn.appendChild(col4);
+
+          return textColumn;
+        }
+
+        function image_Column(i, portfolioImages) {
+          // Image Column
+          const imageColumn = document.createElement("div");
+          imageColumn.classList.add("image-column");
+
+          const portAside = document.createElement("aside");
+          const portImages = document.createElement("img");
+          portImages.src = portfolioImages[i];
+          portImages.classList.add("right_img");
+
+          portAside.appendChild(portImages);
+          imageColumn.appendChild(portAside);
+
+          return imageColumn;
+        }
 
         for (let i = 0; i < 3; i++) {
           const articles = document.createElement("article");
@@ -206,112 +264,17 @@
 
           // If the index is even, we display text first, else image first
           if (i % 2 === 0) {
-            // Text Column
-            const textColumn = document.createElement("div");
-            textColumn.classList.add("text-column");
-
-            const col1 = document.createElement("div");
-            col1.classList.add("col");
-
-            const head1 = document.createElement("h1");
-            head1.textContent = heading1;
-            head1.classList.add("uppercase");
-            col1.appendChild(head1);
-
-            const col2 = document.createElement("div");
-            col2.classList.add("col");
-
-            const head2 = document.createElement("h2");
-            head2.textContent = heading2[0];
-            col2.appendChild(head2);
-
-            const col3 = document.createElement("div");
-            col3.classList.add("col");
-
-            const para = document.createElement("p");
-            para.textContent = paragraph;
-            col3.appendChild(para);
-
-            const col4 = document.createElement("div");
-            col4.classList.add("col");
-
-            const button = document.createElement("button");
-            button.textContent = "LEARN MORE →";
-            col4.appendChild(button);
-
-            textColumn.appendChild(col1);
-            textColumn.appendChild(col2);
-            textColumn.appendChild(col3);
-            textColumn.appendChild(col4);
-
-            // Image Column
-            const imageColumn = document.createElement("div");
-            imageColumn.classList.add("image-column");
-            const portAside = document.createElement("aside");
-            const portImages = document.createElement("img");
-            portImages.src = portfolioImages[i];
-            portImages.classList.add("right_img");
-
-            portAside.appendChild(portImages);
-            imageColumn.appendChild(portAside);
-
-            articleRow.appendChild(textColumn);
-            articleRow.appendChild(imageColumn);
+            // Text column first, then image column
+            articleRow.appendChild(
+              text_Column(0, heading1, heading2, paragraph)
+            );
+            articleRow.appendChild(image_Column(i, portfolioImages));
           } else {
-            // Image Column First
-            const imageColumn = document.createElement("div");
-            imageColumn.classList.add("image-column");
-            const portAside = document.createElement("aside");
-            const portImages = document.createElement("img");
-            portImages.src = portfolioImages[i];
-            portImages.classList.add("left_img");
-
-            portAside.appendChild(portImages);
-            imageColumn.appendChild(portAside);
-
-            // Text Column
-            const textColumn = document.createElement("div");
-            textColumn.classList.add("text-column");
-
-            const col1 = document.createElement("div");
-            col1.classList.add("col");
-
-            const head1 = document.createElement("h1");
-            head1.textContent = heading1;
-            head1.classList.add("uppercase");
-
-            col1.appendChild(head1);
-
-            const col2 = document.createElement("div");
-            col2.classList.add("col");
-
-            const head2 = document.createElement("h2");
-            head2.textContent = heading2[1];
-
-            col2.appendChild(head2);
-
-            const col3 = document.createElement("div");
-            col3.classList.add("col");
-
-            const para = document.createElement("p");
-            para.textContent = paragraph;
-            col3.appendChild(para);
-
-            const col4 = document.createElement("div");
-            col4.classList.add("col");
-
-            const button = document.createElement("button");
-            button.textContent = "LEARN MORE →";
-
-            col4.appendChild(button);
-
-            textColumn.appendChild(col1);
-            textColumn.appendChild(col2);
-            textColumn.appendChild(col3);
-            textColumn.appendChild(col4);
-
-            articleRow.appendChild(imageColumn);
-            articleRow.appendChild(textColumn);
+            // Image column first, then text column
+            articleRow.appendChild(image_Column(i, portfolioImages));
+            articleRow.appendChild(
+              text_Column(1, heading1, heading2, paragraph)
+            );
           }
 
           articles.appendChild(articleRow);
